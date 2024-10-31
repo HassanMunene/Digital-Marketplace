@@ -365,10 +365,43 @@ html::-webkit-scrollbar-thumb {
     padding: 1rem 0;
 }
 
+.home .swiper-button-next {
+    top: initial;
+    bottom: 0;
+    left: initial;
+    right: 0;
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    background: var(--white);
+    color: var(--black);
+}
+.home .swiper-button-prev {
+    top: initial;
+    bottom: 0;
+    left: initial;
+    right: 6rem;
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    background: var(--white);
+    color: var(--black);
+}
 
-/*========================================================================
-                    MEDIA QUERIES SECTION
-========================================================================*/
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 3rem;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: var(--blue);
+    color: var(--white) !important;
+}
+
+/*============================================================================================
+                                MEDIA QUERIES SECTION
+=============================================================================================*/
 @media (max-width: 1200px) {
     .header {
         padding: 1.5rem 2rem;
@@ -410,6 +443,18 @@ html::-webkit-scrollbar-thumb {
 @media (max-width: 768px) {
     .header .search-form {
         width: 90%;
+    }
+
+    .home .slide {
+        justify-content: center;
+    }
+
+    .home .slide .content {
+        text-align: center;
+    }
+
+    .home .slide .content h3 {
+        font-size: 3rem;
     }
 }
 
