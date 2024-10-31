@@ -182,8 +182,8 @@ html::-webkit-scrollbar-thumb {
 }
 
 .icons div {
-    height: 5rem;
-    width: 5rem;
+    height: 4rem;
+    width: 4rem;
     font-size: 2rem;
     background: var(--light-bg);
     color: var(--black);
@@ -193,6 +193,11 @@ html::-webkit-scrollbar-thumb {
     justify-content: center;
     text-align: center;
     margin-left: .3rem;
+}
+
+.icons div:hover {
+    background: var(--black);
+    color: var(--white);
 }
 
 #menu-btn {

@@ -10,6 +10,10 @@
     <!--------Link to my downloaded font awesome css file------>
     <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
 
+    <!--------A link to swipper js css file from CDN----------->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+
 </head>
 <body>
     <!---------------------------Header section starts--------------------------------------->
@@ -125,9 +129,9 @@
 
     <!---------------------------Home section starts------------------------------------------>
     <section class="home" id="home">
-        <div class="home-slider">
-            <div class="w">
-                <section class="slide" style="background: url(./assets/benolives_image.webp) no-repeat;">
+        <div class="swiper home-slider">
+            <div class="swiper-wrapper">
+                <section class="swiper-slide slide" style="background: url(./assets/benolives_image.webp) no-repeat;">
                     <div class="content">
                         <h3>
                             We are a company that beleives in securing the cyberspace!
@@ -140,7 +144,37 @@
                         <a href="#contact" class="btn">Contact Us</a>
                     </div>
                 </section>
+                <section class="swiper-slide slide" style="background: url(./assets/benolives_website2.jpg) no-repeat;">
+                    <div class="content">
+                        <h3>
+                            We provide effective web solutions!
+                        </h3>
+                        <p>
+                            We enhance your online presence by leveraging the latest web technologies and best practices. 
+                            Our team specializes in creating responsive, user-friendly websites that drive business growth. 
+                            By partnering with industry-leading technology providers, we ensure that you receive optimal web solutions at competitive prices.
+                        </p>
+                        
+                        <a href="#contact" class="btn">Contact Us</a>
+                    </div>
+                </section>
+                <section class="swiper-slide slide" style="background: url(./assets/benolives_website2.jpg) no-repeat;">
+                    <div class="content">
+                        <h3>
+                            Comprehensive Software Licensing Solutions
+                        </h3>
+                        <p>
+                            We provide both pre-sales and front-line tech support to ensure you get the most out of 
+                            your software investments. Our offerings include volume and single-pack licenses for 
+                            end-user software and antivirus solutions, tailored to meet the needs of businesses and 
+                            individuals alike.
+                        </p>
+                        <a href="#contact" class="btn">Contact Us</a>
+                    </div>
+                </section>
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </section>
     <!---------------------------Home section ends-------------------------------------------->
@@ -150,5 +184,8 @@
 
     <!--------Javascript Link------------------->
     <script src="js/script.js"></script>
+
+    <!---------------------------Swipper js javascript file----------------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>

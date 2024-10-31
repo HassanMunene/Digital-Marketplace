@@ -41,4 +41,13 @@ document.addEventListener('DOMContentLoaded', function() {
         search_form.classList.remove('active');
         contact_info.classList.remove('active');
     }
+
+    var swiper = new Swiper(".home-slider", {
+        loop: true,
+        grabCursor: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+    });
 })
