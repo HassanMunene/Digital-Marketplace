@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/*========================================================================
+            POPPINS STYLES
+========================================================================*/
+.poppins-thin {
+    font-family: "Poppins", serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+.poppins-extralight {
+font-family: "Poppins", serif;
+font-weight: 200;
+font-style: normal;
+}
+  
+.poppins-light {
+font-family: "Poppins", serif;
+font-weight: 300;
+font-style: normal;
+}
+  
+.poppins-regular {
+font-family: "Poppins", serif;
+font-weight: 400;
+font-style: normal;
+}
+  
+.poppins-medium {
+font-family: "Poppins", serif;
+font-weight: 500;
+font-style: normal;
+}
+  
+.poppins-semibold {
+font-family: "Poppins", serif;
+font-weight: 600;
+font-style: normal;
+}
+  
+
+/*========================================================================
+            STYLING STARTS
+========================================================================*/
+:root {
+    --blue: #2d2d72;
+    --black: #111;
+    --white: #fff;
+    --light-color: #666;
+    --light-bg: #eee;
+    --box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+    --border: .1rem solid rgba(0,0,0,.3);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+body {
+    background: var(--light-bg);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--blue);
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+/* Base styles for grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1fr, var(--grid-size)));
+    gap: 2rem;
+}
+
+/* Title text styles */
+.titleText {
+    font-size: 2.5rem; /* Replace with the desired size */
+    color: var(--black);
+    text-transform: capitalize;
+}
+
+/* Graph text styles */
+.graphText {
+    font-size: var(--graph-size); /* You can set this variable elsewhere */
+    color: var(--light-color);
+    line-height: 1.5;
+}
+
+/* Icons box styles */
+.iconsBox {
+    height: 5rem;
+    width: 5rem;
+    font-size: 2rem;
+    background: var(--light-bg);
+    color: var(--black);
+    cursor: pointer;
+    text-align: center;
+}
+
+.iconsBox:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
+.navbar a {
+    font-size: 2.5rem;
+    color: var(--black);
+    text-transform: capitalize;
+    margin: 0 1rem;
+}
+.navbar a:hover {
+    color: var(--blue);
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons div {
+    height: 5rem;
+    width: 5rem;
+    font-size: 2rem;
+    background: var(--white);
+    color: var(--black);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: .3rem;
+}
+
+#menu-btn {
+    display: none;
+}
+
+.header .search-form {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70rem;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header .search-form input {
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    background: var(--light-bg);
+    font-size: 1.6rem;
+    color: var(--light-color);
+}
+
+
+/*========================================================================
+                    MEDIA QUERIES SECTION
+========================================================================*/
+@media (max-width: 1200px) {
+    .header {
+        padding: 1.5rem 2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header #menu-btn {
+        display: flex;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        border-top: var(--border);
+        border-bottom: var(--border);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .header .navbar a {
+        display: block;
+        margin: 2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 45%;
+    }
+}
