@@ -116,10 +116,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const serviceName = service.querySelector('span').textContent;
 
             // Check if content is already expanded to prevent duplicates
+            // if the content is not expanded, expand it
             if (!service.querySelector('.expanded-content')) {
                 const expandedContent = document.createElement('div');
+                // we could use the `expanded-content` to style that section
                 expandedContent.classList.add('expanded-content');
-                //Get the specific data and input it
+                //Get the specific data and input it from the object we've declared up
                 expandedContent.textContent = serviceDetails[serviceName] || 'No additional information available.';
                 service.appendChild(expandedContent);
             } else {
