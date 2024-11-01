@@ -40,14 +40,14 @@ font-style: normal;
 }
   
 
-/*========================================================================
-            STYLING STARTS
-========================================================================*/
+/*============================================================================================
+                        STYLING STARTS
+=============================================================================================*/
 :root {
     --blue: #2d2d72;
     --black: #111;
     --white: #fff;
-    --light-color: #666;
+    --light-color: #585757;
     --light-bg: #eee;
     --box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
     --border: .1rem solid rgba(0,0,0,.3);
@@ -79,6 +79,15 @@ section {
     padding: 5rem 10%;
 }
 
+.heading {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    color: var(--black);
+    text-transform: capitalize;
+    padding-left: 1rem;
+    border-left: 1rem solid var(--blue);
+}
+
 .btn {
     display: inline-block;
     margin-top: 1rem;
@@ -90,16 +99,27 @@ section {
     text-transform: capitalize;
 }
 .btn:hover {
-    background: var(--white);
-    color: var(--black);
+    background: var(--black);
+    color: var(--white);
 }
-/*========================================================================
-                    Keyframes Animations
-========================================================================*/
+/*==========================================================================================
+                                    Keyframes Animations
+===========================================================================================*/
 @keyframes fadeIn {
     0% {
         top: 50%;
         opacity: 0;
+    }
+}
+
+@keyframes fadeIn_ServicesSection {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -115,6 +135,10 @@ html::-webkit-scrollbar-thumb {
     background: var(--blue);
 }
 
+
+/*==========================================================================================
+                                    HEADER SECTION STARTS HERE
+===========================================================================================*/
 .header {
     position: sticky;
     top: 0;
@@ -127,43 +151,6 @@ html::-webkit-scrollbar-thumb {
     justify-content: space-between;
     z-index: 1000;
     background: var(--white);
-}
-
-/* Base styles for grid */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(1fr, var(--grid-size)));
-    gap: 2rem;
-}
-
-/* Title text styles */
-.titleText {
-    font-size: 2.5rem; /* Replace with the desired size */
-    color: var(--black);
-    text-transform: capitalize;
-}
-
-/* Graph text styles */
-.graphText {
-    font-size: var(--graph-size); /* You can set this variable elsewhere */
-    color: var(--light-color);
-    line-height: 1.5;
-}
-
-/* Icons box styles */
-.iconsBox {
-    height: 5rem;
-    width: 5rem;
-    font-size: 2rem;
-    background: var(--light-bg);
-    color: var(--black);
-    cursor: pointer;
-    text-align: center;
-}
-
-.iconsBox:hover {
-    background: var(--black);
-    color: var(--white);
 }
 
 .navbar a {
@@ -325,6 +312,9 @@ html::-webkit-scrollbar-thumb {
     color: var(--white);
 }
 
+/*=============================================================================================
+                        HERO SECTION AND SLIDER STARTS HERE
+=============================================================================================*/
 .home {
     padding: 0;
 }
@@ -345,6 +335,27 @@ html::-webkit-scrollbar-thumb {
     height: 100%;
     width: 100%;
     background: rgba(0,0,0,.2);
+}
+
+/* decrease the opacity if the two slides to make the text more visible */
+.home .slide2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.4);
+}
+
+.home .slide3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.4);
 }
 
 .home .slide .content {
@@ -399,6 +410,158 @@ html::-webkit-scrollbar-thumb {
     color: var(--white) !important;
 }
 
+
+/*==========================================================================================
+                                    ABOUT US SECTION STARTS
+===========================================================================================*/
+#about-us {
+    background-color: #fff;
+}
+
+#about-us .heading-subtitle {
+    font-size: 1.5rem;
+}
+
+#about-us .text_section {
+    font-size: 1.3rem;
+    color: #3f3e3e;
+    max-width: 800px;
+    margin: auto;
+}
+
+#about-us .content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#about-us .content .about-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: flex-start;
+    max-width: 1200px;
+}
+
+.about-image, .about-text {
+    text-align: justify;
+    line-height: 1.6;
+    flex: 1;
+    max-width: 500px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#about-us .box-container {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+}
+
+#about-us .box-container .box {
+    text-align: center;
+    background: var(--light-bg);
+    padding: 3rem 2rem;
+}
+
+#about-us .box-container .box h3 {
+    font-size: 3rem;
+    color: var(--black);
+    text-transform: capitalize;
+}
+
+#about-us .box-container .box p {
+    font-size: 1.5rem;
+    color: var(--light-color);
+    line-height: 1.5;
+}
+
+#about-us .show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/*==========================================================================================
+                                OUR SERVICES SECTION STARTS
+===========================================================================================*/
+#services .heading-subtitle {
+    font-size: 1.5rem;
+}
+
+#services .services-container {
+    padding-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+#services .services-container .service-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn_ServicesSection 0.5s ease forwards;
+    opacity: 0;
+}
+
+.service-card img {
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.service-card .service-title {
+    font-size: 2rem;
+    padding: 0px 16px;
+    color: var(--blue);
+}
+
+.service-card .service-description {
+    font-size: 1.4rem;
+    padding: 0px 16px;
+    color: var(--light-color);
+}
+
+.service-card .sub-services {
+    padding-top: 30px;
+    text-align: left;
+}
+
+.service-card .sub-services .sub-service {
+    border-top: 1px solid rgb(226, 224, 224);
+    padding: 10px 16px;
+    cursor: pointer;
+    position: relative;
+    color: var(--black);
+    font-size: small;
+    transition: background 0.2s;
+}
+
+.service-card .sub-services .sub-service:hover {
+    background: #f0f0f0;
+}
+
+.sub-service .arrow {
+    position: absolute;
+    right: 10px;
+}
+
+.service-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
 /*============================================================================================
                                 MEDIA QUERIES SECTION
 =============================================================================================*/
@@ -412,10 +575,6 @@ html::-webkit-scrollbar-thumb {
 }
 
 @media (max-width: 991px) {
-    html {
-        font-size: 55%;
-    }
-
     .header #menu-btn {
         display: flex;
     }
@@ -455,6 +614,32 @@ html::-webkit-scrollbar-thumb {
 
     .home .slide .content h3 {
         font-size: 3rem;
+    }
+
+    /* decrease the opacity of the two slides on mobile screens even more to make the
+    texts more visible */
+    .home .slide2::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0,0,0,.6);
+    }
+    
+    .home .slide3::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0,0,0,.6);
+    }
+
+    .about-section {
+        flex-direction: column;
     }
 }
 
