@@ -132,3 +132,25 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     });   
 })
+
+/*=============================================================================================
+                            ANIMATE THE SECTIONS
+==============================================================================================*/
+document.addEventListener('DOMContentLoaded', function() {
+    let sections = document.querySelectorAll('section');
+
+    window.onscroll = () => {
+        let scrollY = window.scrollY; // Correctly get the scroll position
+
+        sections.forEach(section => {
+            let offset = section.offsetTop - 150;
+            let height = section.offsetHeight;
+
+            if (scrollY >= offset && scrollY < offset + height) {
+                section.classList.add('show-animate');
+            } else {
+                section.classList.remove('show-animate');
+            }
+        });
+    };
+});
