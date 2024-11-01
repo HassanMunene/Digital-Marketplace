@@ -113,17 +113,6 @@ section {
     }
 }
 
-@keyframes fadeIn_ServicesSection {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 html::-webkit-scrollbar {
     width: 1rem;
 }
@@ -421,7 +410,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .about-us-section .animate {
-    transform: translateX(-100%);
+    transform: translateX(-70%);
     opacity: 0;
     transition: 1s;
 }
@@ -504,6 +493,16 @@ html::-webkit-scrollbar-thumb {
 /*==========================================================================================
                                 OUR SERVICES SECTION STARTS
 ===========================================================================================*/
+.services-section .animate {
+    transform: scale(.7);
+    opacity: 0;
+    transition: 1s;
+}
+
+.services-section.show-animate .animate {
+    transform: scale(1);
+    opacity: 1;
+}
 #services .heading-subtitle {
     font-size: 1.5rem;
 }
@@ -521,9 +520,6 @@ html::-webkit-scrollbar-thumb {
     border-radius: 8px;
     overflow-x: hidden;
     overflow-y: scroll;
-    transition: transform 0.3s, box-shadow 0.3s;
-    animation: fadeIn_ServicesSection 0.5s ease forwards;
-    opacity: 0;
 }
 
 .service-card img {
