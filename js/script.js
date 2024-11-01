@@ -78,35 +78,35 @@ document.addEventListener('DOMContentLoaded', function() {
 ==============================================================================================*/
 document.addEventListener('DOMContentLoaded', function() {
     const serviceDetails = {
+        // Software Licensing
+        'Multi-Device Licensing': 'We provide licenses that cover multiple devices or users, simplifying management and ensuring comprehensive protection across all endpoints.',
+        'Centralized License Management': 'We use centralized management tools to track and manage licenses easily, ensuring compliance and maximizing the use of purchased licenses.',
+        'License Compliance Support': 'We provide guidance and support to help organizations stay compliant with licensing terms, reducing the risk of penalties and audits.',
+
+        // Enterprise Security
+        'Endpoint Security': 'Protects all endpoints in your organization (desktops, laptops, mobile devices) with Bitdefender’s robust endpoint security solutions, ensuring comprehensive coverage against malware and other cyber threats.',
+        'Network Security': 'We implement Bitdefender network security solutions to monitor and defend against intrusions and malicious traffic across your network.',
+        'Data Protection': 'We ensure sensitive data is safeguarded with encryption and secure data loss prevention features, protecting against data breaches and unauthorized access.',
+
         // Cybersecurity Solutions
-        'Threat Detection': 'Identifies and alerts you to potential security threats in real time.',
-        'Incident Response': 'Provides a comprehensive response plan to minimize damage from breaches.',
-        'Security Audits': 'Assesses defenses and identifies vulnerabilities in your systems.',
+        'Comprehensive Endpoint Protection': 'We utilize advanced endpoint protection to safeguard all devices against malware, ransomware, and other cyber threats with real-time scanning and protection.',
+        'Advanced Threat Intelligence': 'We leverage our top products global threat intelligence network to stay informed about emerging threats and vulnerabilities, allowing proactive defense strategies.',
+        'Security Awareness Training': 'We offer training programs for employees to enhance their understanding of cybersecurity best practices, reducing the risk of human error leading to security incidents.',
     
         // Web Development
-        'E-commerce Solutions': 'Custom solutions to enhance your online sales and customer experience.',
-        'Responsive Design': 'Ensures your website works seamlessly across all devices.',
-        'Content Management Systems': 'Empowers you to manage your website content effortlessly.',
+        'E-commerce Solutions': 'We create robust e-commerce platforms that facilitate online transactions, provide secure payment options including Mpesa integration, and enhance the overall shopping experience.',
+        'SEO Optimization': 'We integrate SEO best practices into web development to improve search engine rankings, driving organic traffic and increasing visibility.',
+        'Content Management Systems': 'We develop user-friendly CMS solutions that empower clients to easily manage and update their website content without technical expertise.',
     
         // Digital Transformation
-        'Consulting': 'Strategic advice to navigate complex digital challenges and drive innovation.',
-        'Risk Management': 'Identifies and mitigates risks in your digital transformation journey.',
-        'Process Improvement': 'Streamlines operations for enhanced efficiency and effectiveness.',
-    
-        // Software Licensing
-        'License Management': 'Helps you manage software licenses efficiently to stay compliant.',
-        'Software Procurement': 'Guides you through the best software purchasing decisions.',
-        'Vendor Management': 'Manages relationships with software vendors to maximize value.',
-    
+        'Process Automation': 'We help businesses identify and automate repetitive tasks to enhance productivity, reduce errors, and free up resources for more strategic initiatives.',
+        'Cloud Solutions': 'We support businesses to migration to cloud-based solutions, enabling scalability, flexibility, and improved collaboration across teams and locations.',
+        'Cybersecurity Integration': 'We ensure that cybersecurity measures are integrated into digital transformation efforts, protecting sensitive data and systems throughout the transition.',
+      
         // Consulting Services
-        'Business Analysis': 'Comprehensive analysis to understand your business needs and goals.',
-        'Strategic Planning': 'Helps in developing actionable plans for business growth.',
+        'Technology Integration': 'We help organizations choose and implement technology solutions that enhance their operations, improve efficiency, and drive innovation.',
+        'Regulatory Compliance': 'We Guide clients in navigating regulatory requirements relevant to their industry, ensuring compliance and reducing the risk of penalties.',
         'Market Research': 'Provides insights into market trends to inform your strategies.',
-    
-        // Enterprise Security
-        'Threat Intelligence': 'Delivers insights into potential threats to your enterprise.',
-        'Compliance Solutions': 'Ensures your organization meets industry regulations and standards.',
-        'Security Training': 'Educates employees on best practices for maintaining security.'
     };    
     const sub_service_card = document.querySelectorAll('.sub-service');
     sub_service_card.forEach(service => {
