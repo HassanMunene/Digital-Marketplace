@@ -107,15 +107,20 @@ document.addEventListener('DOMContentLoaded', function() {
         'Technology Integration': 'We help organizations choose and implement technology solutions that enhance their operations, improve efficiency, and drive innovation.',
         'Regulatory Compliance': 'We Guide clients in navigating regulatory requirements relevant to their industry, ensuring compliance and reducing the risk of penalties.',
         'Market Research': 'Provides insights into market trends to inform your strategies.',
-    };    
+    };  
+
     const sub_service_card = document.querySelectorAll('.sub-service');
     sub_service_card.forEach(service => {
         service.addEventListener('click', function() {
+            //get the service name
+            const serviceName = service.querySelector('span').textContent;
+
             // Check if content is already expanded to prevent duplicates
             if (!service.querySelector('.expanded-content')) {
                 const expandedContent = document.createElement('div');
-                expandedContent.classList.add('expanded-content'); // Add a class for styling
-                expandedContent.textContent = 'More details about ' + service.querySelector('span').textContent;
+                expandedContent.classList.add('expanded-content');
+                //Get the specific data and input it
+                expandedContent.textContent = serviceDetails[serviceName] || 'No additional information available.';
                 service.appendChild(expandedContent);
             } else {
                 // Optionally, you could toggle the visibility
