@@ -160,8 +160,11 @@ document.addEventListener('DOMContentLoaded', function() {
                             REVIEWS SECTION
 ==============================================================================================*/
 document.addEventListener('DOMContentLoaded', function() {
-    const nextReviewBtn = document.querySelector('.right-arrow')
-    const prevReviewBtn = document.querySelector('.left-arrow')
+    const nextReviewBtn = document.querySelector('.right-arrow');
+    const prevReviewBtn = document.querySelector('.left-arrow');
+    const smallScreenNextBtn = document.querySelector('.right-arrow-btn');
+    const smallScreenPrevBtn = document.querySelector('.left-arrow-btn');
+
     const reviews = [
         {
             text: "Working with Benolives has truly transformed our approach to cybersecurity. Their expertise is unmatched, and the personalized support they provide makes all the difference. They took the time to understand our unique challenges and offered tailored solutions that fit our needs perfectly. We now feel more secure and confident in our digital operations, knowing we have a reliable partner by our side.",
@@ -234,6 +237,14 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
     prevReviewBtn.addEventListener('click', function() {
+        prevReview();
+    })
+
+    smallScreenNextBtn.addEventListener('click', function() {
+        nextReview();
+    })
+
+    smallScreenPrevBtn.addEventListener('click', function() {
         prevReview();
     })
 })

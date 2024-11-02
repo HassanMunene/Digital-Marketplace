@@ -723,9 +723,9 @@ html::-webkit-scrollbar-thumb {
 }
 
 .client-reviews .clients-container .review-section .review-text {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: var(--black);
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .client-reviews .clients-container .review-section .client-info {
@@ -758,6 +758,33 @@ html::-webkit-scrollbar-thumb {
     color: #FFD700;
 }
 
+.reviews-wrapper .navigationButtons {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.reviews-wrapper .navigationButtons .left-arrow-btn,
+.reviews-wrapper .navigationButtons .right-arrow-btn {
+    background: var(--blue);
+    color: var(--white);
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.reviews-wrapper .navigationButtons .left-arrow-btn:hover {
+    background: var(--yellow);
+}
+.reviews-wrapper .navigationButtons .right-arrow-btn:hover {
+    background: var(--yellow);
+}
 
 /*============================================================================================
                                 MEDIA QUERIES SECTION
@@ -793,6 +820,12 @@ html::-webkit-scrollbar-thumb {
     .header .navbar a {
         display: block;
         margin: 2rem;
+    }
+
+    /* reviews section */
+    .client-reviews .reviews-wrapper .left-arrow,
+    .client-reviews .reviews-wrapper .right-arrow {
+        display: none;
     }
 }
 
@@ -846,6 +879,13 @@ html::-webkit-scrollbar-thumb {
 
 @media (max-width: 450px) {
     html {
-        font-size: 45%;
+        font-size: 65%;
+    }
+
+    /* reviews section */
+    .client-reviews .clients-container .client-images .client-image {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
     }
 }
