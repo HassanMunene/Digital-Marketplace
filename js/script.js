@@ -154,3 +154,86 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
 });
+
+
+/*=============================================================================================
+                            REVIEWS SECTION
+==============================================================================================*/
+document.addEventListener('DOMContentLoaded', function() {
+    const nextReviewBtn = document.querySelector('.right-arrow')
+    const prevReviewBtn = document.querySelector('.left-arrow')
+    const reviews = [
+        {
+            text: "Working with Benolives has truly transformed our approach to cybersecurity. Their expertise is unmatched, and the personalized support they provide makes all the difference. They took the time to understand our unique challenges and offered tailored solutions that fit our needs perfectly. We now feel more secure and confident in our digital operations, knowing we have a reliable partner by our side.",
+            name: "Mwangi Kamau",
+            stars: "★★★★★",
+            image: "./assets/review_img1.avif"
+        },
+        {
+            text: "The customized website Benolives developed for us has significantly boosted our online presence. Their team worked closely with us throughout the process, ensuring every detail reflected our brand identity. The result was a stunning, user-friendly website that has attracted more visitors and increased engagement. I highly recommend their services to anyone looking to enhance their online visibility!",
+            name: "Aisha Wambui",
+            stars: "★★★★☆",
+            image: "./assets/review_img2.avif"
+        },
+        {
+            text: "We feel safer with Benolives protecting our business. Their software solutions are top-notch, providing us with robust security against evolving cyber threats. The ongoing support and regular updates ensure that we are always ahead of potential risks. Knowing we have such a competent team behind us gives us peace of mind to focus on our core operations.",
+            name: "Juma Abdi",
+            stars: "★★★★★",
+            image: "./assets/review_img3.avif"
+        },
+        {
+            text: "Professional and dedicated, the team at Benolives guided us through our digital transformation seamlessly. From initial consultation to implementation, their process was clear and collaborative. They equipped us with the necessary tools to navigate the digital landscape confidently, and we’ve seen remarkable improvements in our operational efficiency since working with them.",
+            name: "Fatima Njeri",
+            stars: "★★★★☆",
+            image: "./assets/review_img4.avif"
+        },
+        {
+            text: "Fantastic support! The team at Benolives really knows how to meet their clients' needs. They are responsive, knowledgeable, and genuinely care about our success. Whenever we have questions or require assistance, they are just a call away, ready to help. This level of customer service is rare and highly appreciated.",
+            name: "Liam Otieno",
+            stars: "★★★★★",
+            image: "./assets/review_img5.avif"
+        }
+    ];
+    
+    let currentReviewIndex = 0;
+
+    function updateReview() {
+        const reviewText = document.querySelector('.review-text');
+        const clientImage = document.querySelector('.client-info-image');
+        const clientName = document.querySelector('.client-name');
+        const clientStars = document.querySelector('.stars');
+        const clientImages = document.querySelectorAll('.client-image');
+    
+        reviewText.textContent = reviews[currentReviewIndex].text;
+        clientImage.src = reviews[currentReviewIndex].image;
+        clientName.textContent = reviews[currentReviewIndex].name;
+        clientStars.textContent = reviews[currentReviewIndex].stars;
+    
+        clientImages.forEach((img, index) => {
+            img.classList.remove('active');
+            if (index === currentReviewIndex) {
+                img.classList.add('active');
+            }
+        });
+    }   
+    
+    function nextReview() {
+        currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
+        updateReview();
+    }
+
+    function prevReview() {
+        currentReviewIndex = (currentReviewIndex - 1 + reviews.length) % reviews.length;
+        updateReview();
+    }
+    // Initial load
+    updateReview();
+
+    nextReviewBtn.addEventListener('click', function() {
+        nextReview();
+    })
+
+    prevReviewBtn.addEventListener('click', function() {
+        prevReview();
+    })
+})

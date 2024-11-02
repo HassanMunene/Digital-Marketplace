@@ -45,6 +45,7 @@ font-style: normal;
 =============================================================================================*/
 :root {
     --blue: #2d2d72;
+    --yellow: #f5bf23;
     --black: #111;
     --white: #fff;
     --light-color: #585757;
@@ -640,6 +641,48 @@ html::-webkit-scrollbar-thumb {
     background-color: #f9f9f9;
 }
 
+.client-reviews .reviews-wrapper {
+    position: relative;
+}
+
+.client-reviews .reviews-wrapper .right-arrow {
+    position: absolute;
+    top: 17rem;
+    right: 17rem;
+    background: var(--blue);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.client-reviews .reviews-wrapper .right-arrow:hover {
+    background: var(--yellow);
+}
+
+.client-reviews .reviews-wrapper .left-arrow {
+    position: absolute;
+    top: 17rem;
+    left: 17rem;
+    background: var(--blue);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.client-reviews .reviews-wrapper .left-arrow:hover {
+    background: var(--yellow);
+}
+
 .client-reviews .clients-container {
     padding-top: 6rem;
     display: flex;
@@ -700,33 +743,19 @@ html::-webkit-scrollbar-thumb {
     object-fit: cover;
 }
 
-.client-details {
+.review-section .client-info .client-details {
     text-align: left;
 }
 
-.client-name {
-    font-size: 1rem;
+.review-section .client-info .client-details .client-name {
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #333;
+    color: var(--blue);
 }
 
-.stars {
-    color: #FFD700; /* Gold color for stars */
-}
-
-.navigation {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
-.arrow {
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    margin: 0 1rem;
-    color: #007BFF;
+.review-section .client-info .client-details .stars {
+    font-size: 1.2rem;
+    color: #FFD700;
 }
 
 
