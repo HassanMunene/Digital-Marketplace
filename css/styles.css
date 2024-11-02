@@ -574,6 +574,38 @@ html::-webkit-scrollbar-thumb {
     color: var(--blue);
 }
 
+
+/*==========================================================================================
+                                OUR PARTNERS SECTION
+===========================================================================================*/
+#partners .heading-subtitle {
+    font-size: 1.5REM;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+#partners .partners-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#partners .partners-container .partner-card {
+    display: block;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+}
+
+#partners .partners-container .partner-card .partner-card img {
+    width: 100%; /* Responsive logo */
+    height: auto;
+    padding: 10px; /* Space around logo */
+}
+
 /*============================================================================================
                                 MEDIA QUERIES SECTION
 =============================================================================================*/
