@@ -803,36 +803,29 @@ html::-webkit-scrollbar-thumb {
     gap: 1rem; /*adds space between the cards */
 }
 
-.team-member {
+.team-story-section .team-container .team-member {
     background: white;
-    border-radius: 10px;
-    padding: 1rem;
-    margin: 1rem;
+    border-radius: 8px;
+    padding: .5rem;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 250px; /* Adjust as needed */
 }
 
-.team-member-image {
+.team-story-section .team-container .team-member .team-member-image {
     width: 100%;
     height: auto;
-    border-radius: 50%;
+    border-radius: 4px;
 }
 
-.team-member-name {
-    font-size: 1.5rem;
+.team-container .team-member .team-member-name {
+    font-size: 1.8rem;
     margin: 0.5rem 0;
 }
 
-.team-member-role {
-    font-size: 1rem;
-    color: #777;
-}
-
-.team-member-bio {
-    font-size: 0.9rem;
-    color: #555;
-    margin-top: 0.5rem;
+.team-container .team-member .team-member-role {
+    font-size: 1.2rem;
+    color: var(--blue);
 }
 
 .team-history {
