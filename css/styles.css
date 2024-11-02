@@ -759,8 +759,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .reviews-wrapper .navigationButtons {
-    display: block;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     gap: 1rem;
@@ -773,7 +772,7 @@ html::-webkit-scrollbar-thumb {
     width: 80px;
     height: 40px;
     border-radius: 5px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -827,6 +826,16 @@ html::-webkit-scrollbar-thumb {
     .client-reviews .reviews-wrapper .right-arrow {
         display: none;
     }
+
+    .reviews-wrapper .navigationButtons {
+        display: flex;
+    }
+
+    .reviews-wrapper .navigationButtons .left-arrow-btn,
+    .reviews-wrapper .navigationButtons .right-arrow-btn {
+        display: flex;
+    }
+    
 }
 
 @media (max-width: 768px) {
