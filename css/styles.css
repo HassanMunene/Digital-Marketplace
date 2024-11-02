@@ -113,6 +113,17 @@ section {
     }
 }
 
+@keyframes fadeIn_Partners_section {
+    0% {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 html::-webkit-scrollbar {
     width: 1rem;
 }
@@ -578,6 +589,10 @@ html::-webkit-scrollbar-thumb {
 /*==========================================================================================
                                 OUR PARTNERS SECTION
 ===========================================================================================*/
+.our-partners-section.show-animate .animate {
+    animation: fadeIn_Partners_section 0.5s ease forwards;
+    transition: 1s;
+}
 #partners .heading-subtitle {
     font-size: 1.5REM;
     color: #000;
@@ -591,7 +606,9 @@ html::-webkit-scrollbar-thumb {
 }
 
 #partners .partners-container .partner-card {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-items: center;
     width: 300px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
@@ -600,10 +617,19 @@ html::-webkit-scrollbar-thumb {
     box-shadow: var(--box-shadow);
 }
 
-#partners .partners-container .partner-card .partner-card img {
-    width: 100%; /* Responsive logo */
+#partners .partners-container .partner-card img {
     height: auto;
-    padding: 10px; /* Space around logo */
+    padding: 10px;
+    
+}
+
+#partners .partners-container .partner-card .cybill_img {
+    padding-left: 45px !important;
+}
+
+#partners .partners-container .partner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 /*============================================================================================
@@ -684,6 +710,10 @@ html::-webkit-scrollbar-thumb {
 
     .about-section {
         flex-direction: column;
+    }
+
+    #partners .partners-container .partner-card {
+        width: 100%;
     }
 }
 
