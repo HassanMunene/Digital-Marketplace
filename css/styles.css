@@ -1,45 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
-/*========================================================================
-            POPPINS STYLES
-========================================================================*/
-.poppins-thin {
-    font-family: "Poppins", serif;
-    font-weight: 100;
-    font-style: normal;
-  }
-  
-.poppins-extralight {
-font-family: "Poppins", serif;
-font-weight: 200;
-font-style: normal;
-}
-  
-.poppins-light {
-font-family: "Poppins", serif;
-font-weight: 300;
-font-style: normal;
-}
-  
-.poppins-regular {
-font-family: "Poppins", serif;
-font-weight: 400;
-font-style: normal;
-}
-  
-.poppins-medium {
-font-family: "Poppins", serif;
-font-weight: 500;
-font-style: normal;
-}
-  
-.poppins-semibold {
-font-family: "Poppins", serif;
-font-weight: 600;
-font-style: normal;
-}
-  
-
 /*============================================================================================
                         STYLING STARTS
 =============================================================================================*/
@@ -55,7 +15,7 @@ font-style: normal;
 }
 
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Helvetica', 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -77,7 +37,7 @@ html {
 }
 
 section {
-    padding: 5rem 10%;
+    padding: 5rem 5%;
     overflow-x: hidden;
 }
 
@@ -147,7 +107,7 @@ html::-webkit-scrollbar-thumb {
     left: 0;
     right: 0;
     box-shadow: var(--box-shadow);
-    padding: 1.5rem 10%;
+    padding: 1.5rem 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -155,14 +115,32 @@ html::-webkit-scrollbar-thumb {
     background: var(--white);
 }
 
-.navbar a {
-    font-size: 2.5rem;
-    color: var(--black);
-    text-transform: capitalize;
-    margin: 0 1rem;
+.navbar {
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
+.navbar a {
+    font-size: 2rem;
+    color: var(--black);
+    text-transform: uppercase;
+    margin-left: 1rem;
+}
+
+.navbar a.active {
+    background: var(--blue);
+    padding: 7px 13px;
+    border-radius: 3px;
+    color: var(--white);
+}
+
 .navbar a:hover {
-    color: var(--blue);
+    background: var(--blue);
+    padding: 7px 13px;
+    border-radius: 3px;
+    color: var(--white);
 }
 
 .icons {
@@ -506,7 +484,7 @@ html::-webkit-scrollbar-thumb {
                                 OUR SERVICES SECTION STARTS
 ===========================================================================================*/
 .services-section .animate {
-    transform: scale(.7);
+    transform: scale(.8);
     opacity: 0;
     transition: 1s;
 }
@@ -854,44 +832,70 @@ html::-webkit-scrollbar-thumb {
 /*==========================================================================================
                             CONTACT US SECTION STARTS
 ===========================================================================================*/
-.map-container {
+#contact .map-container {
     margin: 2rem 0;
+    margin-top: 4rem;
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.map-container iframe {
+#contact .map-container iframe {
     width: 100%;
-    height: 400px;
+    height: 500px;
     border: 0;
     border-radius: 8px;
 }
 
-.contact-details {
+#contact .contact-details {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 2rem;
-    justify-content: space-between; /* Adjust spacing between sections */
+    margin-top: 4rem;
+    justify-content: space-between;
 }
 
-.location-info {
+#contact .contact-details .location-info {
     flex: 1;
     min-width: 300px; /* Ensures it doesn’t get too narrow */
     margin-right: 2rem; /* Space between the sections */
+    background: linear-gradient(to right, #4A90E2, #A5C0E9);
+    color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+}
+#contact .contact-details .location-info h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: var(--black);
 }
 
-.contact-form {
+#contact .contact-details .location-info p {
+    font-size: 1.4rem;
+    margin-bottom: 1.3rem;
+    line-height: 1.5;
+}
+
+#contact .contact-details .contact-form {
+    background: #ffffff;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
     flex: 1;
-    min-width: 300px; /* Ensures it doesn’t get too narrow */
+    min-width: 300px;
 }
 
-.location-info h2, .contact-form h2 {
-    margin-bottom: 0.5rem;
+#contact .contact-details .contact-form h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: var(--black);
 }
 
-.location-info p {
-    margin-bottom: 1rem;
+#contact .contact-details .contact-form label {
+    display: block;
+    margin-bottom: 3px;
+    font-weight: bold;
 }
 
 .contact-form input, .contact-form textarea {
@@ -905,7 +909,7 @@ html::-webkit-scrollbar-thumb {
 .contact-form button {
     padding: 0.7rem 1.5rem;
     border: none;
-    background-color: #007bff;
+    background-color: var(--blue);
     color: white;
     border-radius: 4px;
     cursor: pointer;
@@ -913,32 +917,6 @@ html::-webkit-scrollbar-thumb {
 
 .contact-form button:hover {
     background-color: #0056b3;
-}
-
-.contact-details {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-    justify-content: space-between;
-}
-
-.location-info, .contact-form {
-    flex: 1;
-    min-width: 300px; /* Ensures it doesn’t get too narrow */
-    margin: 1rem; /* Adds margin for spacing */
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .contact-details {
-        flex-direction: column; /* Stack sections vertically */
-        align-items: stretch; /* Ensure they stretch to full width */
-    }
-    
-    .location-info, .contact-form {
-        margin: 0; /* Remove margin for stacked layout */
-        margin-bottom: 2rem; /* Add space between sections */
-    }
 }
 
 
@@ -1040,6 +1018,17 @@ html::-webkit-scrollbar-thumb {
 
     #partners .partners-container .partner-card {
         width: 100%;
+    }
+
+    /* contact us section */
+    .contact-details {
+        flex-direction: column; 
+        align-items: stretch;
+    }
+    
+    .location-info, .contact-form {
+        margin: 0;
+        margin-bottom: 2rem;
     }
 }
 
