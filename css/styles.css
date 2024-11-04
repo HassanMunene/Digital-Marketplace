@@ -184,6 +184,27 @@ html {
     cursor: pointer;
 }
 
+.header .mobile-menu {
+    position: fixed; /* Fixed position for mobile menu */
+    top: 0;
+    right: 0; /* Start from the right */
+    width: 300px; /* Set width for the slide-in menu */
+    height: 100vh; /* Full height */
+    background: var(--white);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    z-index: 1000;
+    transform: translateX(100%); /* Start off-screen */
+    opacity: 0; /* Start invisible */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
+    visibility: hidden; /* Hidden by default */
+}
+
+/* Add a new class for hiding the menu */
+.header .mobile-menu.inactive {
+pointer-events: none; /* Prevent interaction when hidden */
+}
+
+
 
 /*=============================================================================================
                         HERO SECTION AND SLIDER STARTS HERE
@@ -826,29 +847,6 @@ html {
 }
 
 @media (max-width: 991px) {
-    /* .header #menu-btn {
-        display: flex;
-    }
-
-    .header .navbar {
-        position: absolute;
-        top: 99%;
-        left: 0;
-        right: 0;
-        background: var(--white);
-        border-top: var(--border);
-        border-bottom: var(--border);
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
-
-    .header .active {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
-    .header .navbar a {
-        display: block;
-        margin: 2rem;
-    } */
-
     /* reviews section */
     .client-reviews .reviews-wrapper .left-arrow,
     .client-reviews .reviews-wrapper .right-arrow {
@@ -877,16 +875,9 @@ html {
     }
 
     .header .mobile-menu {
-        position: fixed; /* Fixed position for mobile menu */
-        top: 0;
-        right: 0; /* Start from the right */
-        width: 300px; /* Set width for the slide-in menu */
-        height: 100vh; /* Full height */
-        background: var(--white);
-        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-        z-index: 1000;
-        transform: translateX(100%); /* Start off-screen */
-        opacity: 0; /* Start invisible */
+        visibility: hidden; /* Ensure it's hidden on desktop */
+        opacity: 0; /* No opacity transition */
+        transform: translateX(100%); /* No transform to maintain position */
         transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
     }
 
@@ -894,13 +885,9 @@ html {
         transform: translateX(0); /* Slide in to visible position */
         opacity: 1; /* Make it visible */
         pointer-events: auto; /* Allow interaction */
+        visibility: visible; /* Set visibility to visible */
     }
-
-    /* Add a new class for hiding the menu */
-    .header .mobile-menu.inactive {
-        pointer-events: none; /* Prevent interaction when hidden */
-    }
-
+    
     /* Styles for the navbar inside mobile menu */
     .mobile-menu .navbar {
         margin-top: 8rem;
@@ -916,7 +903,7 @@ html {
         font-size: 1.5rem; /* Adjust font size */
         color: var(--black); /* Dark text color */
         text-transform: uppercase; /* Uppercase text */
-        margin: 1rem 0; /* Space between items */
+        margin: 2rem 0; /* Space between items */
         text-decoration: none; /* Remove underline */
         transition: color 0.3s; /* Smooth color transition */
     }
