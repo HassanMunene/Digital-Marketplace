@@ -698,16 +698,21 @@ pointer-events: none; /* Prevent interaction when hidden */
 .team-story-section .team-container .team-member {
     background: white;
     border-radius: 8px;
-    padding: .5rem;
+    padding: 1rem;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 250px; /* Adjust as needed */
+    transition: transform 0.3s; /* Add transition for hover effect */
+}
+
+.team-story-section .team-container .team-member:hover {
+    transform: scale(1.05); /* Scale up on hover */
 }
 
 .team-story-section .team-container .team-member .team-member-image {
     width: 100%;
     height: auto;
     border-radius: 4px;
+    margin-bottom: 1rem; /* Space below the image */
 }
 
 .team-container .team-member .team-member-name {
@@ -723,18 +728,23 @@ pointer-events: none; /* Prevent interaction when hidden */
 .team-history {
     margin-top: 3rem;
     text-align: center;
+    max-width: 800px; /* Set a max width for the history section */
+    margin-left: auto; /* Center the section */
+    margin-right: auto; /* Center the section */
+    padding: 0 1rem; /* Add some horizontal padding */
 }
 
 .team-history h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* Slightly larger for emphasis */
     margin-bottom: 1rem;
 }
 
 .team-history p {
-    font-size: 1rem;
+    font-size: 1.4rem;
     color: #555;
     margin: 0.5rem 0;
 }
+
 .team-member-image {
     width: 100%;
     border-radius: 0;
@@ -766,13 +776,12 @@ pointer-events: none; /* Prevent interaction when hidden */
     flex-wrap: wrap;
     margin-top: 4rem;
     justify-content: space-between;
+    gap: 1.5rem;
 }
 
 #contact .contact-details .location-info {
     flex: 1;
-    min-width: 300px; /* Ensures it doesn’t get too narrow */
-    margin-right: 2rem; /* Space between the sections */
-    background: linear-gradient(to right, #4A90E2, #A5C0E9);
+    background: linear-gradient(to right, #2d2d72, #A5C0E9);
     color: var(--white);
     padding: 20px;
     border-radius: 8px;
@@ -781,7 +790,8 @@ pointer-events: none; /* Prevent interaction when hidden */
 #contact .contact-details .location-info h2 {
     font-size: 1.6rem;
     margin-bottom: 10px;
-    color: var(--black);
+    color: var(--white);
+    text-decoration: underline;
 }
 
 #contact .contact-details .location-info p {
@@ -797,7 +807,6 @@ pointer-events: none; /* Prevent interaction when hidden */
     border-radius: 8px;
     box-shadow: var(--box-shadow);
     flex: 1;
-    min-width: 300px;
 }
 
 #contact .contact-details .contact-form h2 {
@@ -927,6 +936,7 @@ pointer-events: none; /* Prevent interaction when hidden */
         font-size: 2.5rem; /* Larger font size */
     }
 
+    /* This is the start of the hero section on mobile screens */
     .home .slide {
         justify-content: center;
     }
@@ -967,6 +977,19 @@ pointer-events: none; /* Prevent interaction when hidden */
 
     #partners .partners-container .partner-card {
         width: 100%;
+    }
+
+    /* Our team members section starts here */
+    .team-story-section .team-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+
+    .team-container .team-member .team-member-name {
+        font-size: 1.5rem; /* Adjust name font size */
+    }
+
+    .team-container .team-member .team-member-role {
+        font-size: 1rem; /* Adjust role font size */
     }
 
     /* contact us section */
