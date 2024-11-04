@@ -115,27 +115,25 @@ html::-webkit-scrollbar-thumb {
     background: var(--white);
 }
 
+.desktop-menu {
+    display: flex; /* Show the desktop menu */
+}
+
 .navbar {
-    float: right;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .navbar a {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--black);
     text-transform: uppercase;
-    margin-left: 1rem;
+    margin-left: 1.5rem;
+    transition: all 0.3s, color 0.3s;
 }
 
-.navbar a.active {
-    background: var(--blue);
-    padding: 7px 13px;
-    border-radius: 3px;
-    color: var(--white);
-}
-
+.navbar a.active,
 .navbar a:hover {
     background: var(--blue);
     padding: 7px 13px;
@@ -143,153 +141,13 @@ html::-webkit-scrollbar-thumb {
     color: var(--white);
 }
 
-.icons {
-    display: flex;
-    align-items: center;
-}
-
-.icons div {
-    height: 4rem;
-    width: 4rem;
-    font-size: 2rem;
-    background: var(--light-bg);
-    color: var(--black);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-left: .3rem;
-}
-
-.icons div:hover {
-    background: var(--black);
-    color: var(--white);
-}
-
-#menu-btn {
+.open-menu-btn {
     display: none;
+    cursor: pointer;
 }
 
-.header .search-form {
-    position: absolute;
-    top: 120%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 70rem;
-    background: var(--white);
-    box-shadow: var(--box-shadow);
-    padding: 1rem;
+.header .mobile-menu {
     display: none;
-    align-items: center;
-    gap: 1rem;
-    animation: fadeIn .2s linear;
-}
-
-.header .active {
-    display: flex;
-}
-
-.header .search-form input {
-    width: 100%;
-    padding: 1.2rem 1.4rem;
-    background: var(--light-bg);
-    font-size: 1.6rem;
-    color: var(--light-color);
-}
-
-.header .search-form label {
-    color: var(--black);
-    cursor: pointer;
-    margin: 0 1rem;
-}
-.header .search-form label:hover {
-    color: var(--blue);
-}
-
-.contact-info {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 30rem;
-    background: var(--white);
-    height: 100%;
-    text-align: center;
-    z-index: 1100;
-    padding: 0 2rem;
-    padding-top: 5rem;
-    display: none;
-}
-
-.contact-info.active {
-    box-shadow: 0 0 0 100vw rgba(0,0,0,.7);
-    display: block;
-}
-
-#close-contact-info {
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-    cursor: pointer;
-    color: var(--black);
-}
-
-#close-contact-info:hover {
-    transform: rotate(90deg);
-}
-
-.contact-info .info {
-    padding: 2rem 0;
-}
-
-.contact-info .info i {
-    padding: .5rem 1rem;
-    font-size: 2rem;
-    background: var(--light-bg);
-    color: var(--black);
-    cursor: pointer;
-    text-align: center;
-    margin-bottom: .5rem;
-}
-
-.contact-info .info i:hover {
-    background: var(--black);
-    color: var(--white);
-}
-
-.contact-info .info h3 {
-    font-size: 2rem;
-    color: var(--black);
-    text-transform: capitalize;
-}
-
-.contact-info .info p {
-    font-size: 1.5rem;
-    color: var(--light-color);
-    line-height: 1.5;   
-}
-
-.contact-info .share {
-    padding-top: 1rem;
-    border-top: var(--border);
-    margin-top: 1rem;
-}
-
-.contact-info .share a {
-    height: 5rem;
-    width: 5rem;
-    padding: .5rem 1rem;
-    font-size: 2rem;
-    background: var(--light-bg);
-    color: var(--black);
-    cursor: pointer;
-    text-align: center;
-    margin: 0 .3rem;
-}
-
-.contact-info .share a:hover {
-    background: var(--black);
-    color: var(--white);
 }
 
 /*=============================================================================================
@@ -974,8 +832,23 @@ html::-webkit-scrollbar-thumb {
 }
 
 @media (max-width: 768px) {
-    .header .search-form {
-        width: 90%;
+    /* Header section  */
+    /* Hide desktop menu on mobile */
+    .desktop-menu {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none; /* Hidden by default */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute;
+        top: 60px; /* Below the header */
+        right: 0;
+        background: var(--white);
+        width: 100%;
+        padding: 1rem;
+        box-shadow: var(--box-shadow);
+        z-index: 1000;
     }
 
     .home .slide {
