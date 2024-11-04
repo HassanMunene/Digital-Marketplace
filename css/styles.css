@@ -908,9 +908,14 @@ pointer-events: none; /* Prevent interaction when hidden */
         transition: color 0.3s; /* Smooth color transition */
     }
 
-    .mobile-menu .navbar a:hover {
-        color: var(--blue); /* Change color on hover */
+    .navbar a.active,
+    .navbar a:hover {
+        background: var(--blue);
+        padding: 7px 13px;
+        border-radius: 3px;
+        color: var(--white);
     }
+
 
     /* Close button style */
     .close-menu-btn {
