@@ -30,7 +30,7 @@ body {
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 68.5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 7rem;
@@ -151,6 +151,13 @@ html {
     z-index: 1000;
     background: var(--white);
 }
+
+.header .logo img {
+    width: 200px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Responsive design */
+}
+
 
 /* Show the desktop menu */
 .desktop-menu {
@@ -478,53 +485,6 @@ pointer-events: none; /* Prevent interaction when hidden */
     color: var(--blue);
 }
 
-
-/*==========================================================================================
-                                OUR PARTNERS SECTION
-===========================================================================================*/
-.our-partners-section.show-animate .animate {
-    animation: fadeIn_Partners_section 0.5s ease forwards;
-    transition: 1s;
-}
-#partners .heading-subtitle {
-    font-size: 1.5REM;
-    color: #000;
-    margin-bottom: 30px;
-}
-
-#partners .partners-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-#partners .partners-container .partner-card {
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    width: 300px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-    border-radius: 8px;
-    background-color: white;
-    box-shadow: var(--box-shadow);
-}
-
-#partners .partners-container .partner-card img {
-    height: auto;
-    padding: 10px;
-    
-}
-
-#partners .partners-container .partner-card .cybill_img {
-    padding-left: 45px !important;
-}
-
-#partners .partners-container .partner-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
 /*==========================================================================================
                                 REVIEWS SECTION STARTS
 ===========================================================================================*/
@@ -842,6 +802,80 @@ pointer-events: none; /* Prevent interaction when hidden */
     background-color: #0056b3;
 }
 
+/*============================================================================================
+                                FOOTER SECTION STYLING
+=============================================================================================*/
+.footer {
+    background-color: var(--blue); /* Use your primary brand color */
+    color: var(--white);
+    text-align: center; /* Center text for a modern look */
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-between; /* Space between elements */
+    max-width: 1200px; /* Constrain width for larger screens */
+    margin: 0 auto; /* Center footer on larger screens */
+}
+
+.footer-logo {
+    background-color: rgba(255, 255, 255, 1); /* Light background with transparency */
+    padding: 0.5rem; /* Add some padding */
+    border-radius: 5px; /* Optional: rounded corners */
+    display: inline-block; /* Ensure it wraps around the logo */
+}
+
+.footer-logo img {
+    max-width: 150px; /* Adjust logo size */
+}
+
+.footer-links,
+.footer-contact,
+.footer-social {
+    flex: 1; /* Allow equal distribution */
+    min-width: 200px; /* Set a minimum width */
+    margin: 1rem; /* Space around sections */
+}
+
+.footer-links ul,
+.footer-social ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+}
+
+.footer-links ul li {
+    font-size: 1.4rem;
+}
+
+.footer-social ul {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-contact p {
+    font-size: 1.4rem;
+}
+
+.footer-links a,
+.footer-social a {
+    color: var(--white);
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth transition */
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+    color: var(--light-gray); /* Change color on hover */
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    font-size: 1.3rem; /* Smaller text for copyright */
+}
 
 /*============================================================================================
                                 MEDIA QUERIES SECTION
@@ -975,10 +1009,6 @@ pointer-events: none; /* Prevent interaction when hidden */
         flex-direction: column;
     }
 
-    #partners .partners-container .partner-card {
-        width: 100%;
-    }
-
     /* Our team members section starts here */
     .team-story-section .team-container {
         grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
@@ -1001,6 +1031,23 @@ pointer-events: none; /* Prevent interaction when hidden */
     .location-info, .contact-form {
         margin: 0;
         margin-bottom: 2rem;
+    }
+
+    .footer-container {
+        flex-direction: column; /* Stack elements on small screens */
+        align-items: start; /* Center items */
+    }
+
+    .footer-links,
+    .footer-contact,
+    .footer-social {
+        text-align: start; /* Center text for better readability */
+        margin: 1rem 0; /* Space around stacked sections */
+    }
+
+    .footer-social ul {
+        align-items: center;
+        justify-content: flex-start;
     }
 }
 
