@@ -15,6 +15,7 @@
 .client-reviews {
     position: relative;
     background-color: var(--light-bg);
+    text-align: center;
 }
 
 .client-reviews .heading {
@@ -26,6 +27,14 @@
     text-transform: capitalize;
     padding-left: 1rem;
     border-left: 1rem solid var(--blue);
+}
+
+.client-reviews .heading-subtitle {
+    max-width: 100%;
+    font-size: 1.6rem;
+    color: #555;
+    margin: 0 auto;
+    margin-bottom: 30px;
 }
 
 .client-reviews .reviews-wrapper {
@@ -172,7 +181,41 @@
     background: var(--yellow);
 }
 
+/* Styling for the new Client Logos section */
+.client-logos {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.client-logos h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.logos-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 11px;
+}
+
+.client-logo:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Desktop screens */
+@media (min-width: 1024px) {
+    .client-reviews .heading-subtitle {
+        max-width: 800px;
+    }
+}
+
 @media (max-width: 991px) {
+    .client-reviews .heading-subtitle {
+        max-width: 800px;
+        font-size: 1.4rem;
+    }
+
     /* reviews section */
     .client-reviews .reviews-wrapper .left-arrow,
     .client-reviews .reviews-wrapper .right-arrow {
@@ -187,5 +230,28 @@
     .reviews-wrapper .navigationButtons .right-arrow-btn {
         display: flex;
     }
-    
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 65%;
+    }
+
+    /* reviews section */
+    .client-reviews .clients-container .client-images .client-image {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+
+    .client-logo {
+        max-width: 100px;
+    }
+
+    .logos-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
