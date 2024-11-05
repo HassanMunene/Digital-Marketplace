@@ -19,11 +19,25 @@
 
 #partners {
     background-color: var(--white);
+    text-align: center;
+}
+
+#partners .heading {
+    display: inline-block;
+    margin: 2rem 0;
+    width: auto;
+    font-size: 3rem;
+    color: var(--black);
+    text-transform: capitalize;
+    padding-left: 1rem;
+    border-left: 1rem solid var(--blue);
 }
 
 #partners .heading-subtitle {
-    font-size: 1.5REM;
-    color: #000;
+    max-width: 100%;
+    font-size: 1.6rem;
+    color: #555;
+    margin: 0 auto;
     margin-bottom: 30px;
 }
 
@@ -58,8 +72,11 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Desktop: Reduce size of partner logos */
+/* Desktop screens */
 @media (min-width: 1024px) {
+    #partners .heading-subtitle {
+        max-width: 800px;
+    }
     #partners .partners-container .partner-card img {
         max-width: 100%; /* Set max-width for desktop */
         margin: 0 auto; /* Optional: Center images */
@@ -80,6 +97,10 @@
 
 /* Tablet (optional) */
 @media (max-width: 1024px) and (min-width: 768px) {
+    #partners .heading-subtitle {
+        max-width: 800px;
+        font-size: 1.4rem;
+    }
     #partners .partners-container .partner-card {
         width: 150px;
     }
