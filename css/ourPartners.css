@@ -1,3 +1,14 @@
+:root {
+    --blue: #2d2d72;
+    --yellow: #f5bf23;
+    --black: #111;
+    --white: #fff;
+    --light-color: #585757;
+    --light-bg: #eee;
+    --box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+    --border: .1rem solid rgba(0,0,0,.3);
+}
+
 /*==========================================================================================
                                 OUR PARTNERS SECTION
 ===========================================================================================*/
@@ -5,6 +16,11 @@
     animation: fadeIn_Partners_section 0.5s ease forwards;
     transition: 1s;
 }
+
+#partners {
+    background-color: var(--white);
+}
+
 #partners .heading-subtitle {
     font-size: 1.5REM;
     color: #000;
@@ -14,14 +30,14 @@
 #partners .partners-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 11px;
 }
 
 #partners .partners-container .partner-card {
     display: flex;
     align-items: center;
     justify-items: center;
-    width: 300px;
+    width: 200px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
     border-radius: 8px;
@@ -42,6 +58,14 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Desktop: Reduce size of partner logos */
+@media (min-width: 1024px) {
+    #partners .partners-container .partner-card img {
+        max-width: 100%; /* Set max-width for desktop */
+        margin: 0 auto; /* Optional: Center images */
+    }
+}
+
 @media (max-width: 768px) {
     /* PARTNERS SECTION STARTS HERE */
     #partners .partners-container {
@@ -49,6 +73,25 @@
     }
 
     #partners .partners-container .partner-card {
-        width: 100%;
+        width: 150px;
+    }
+}
+
+
+/* Tablet (optional) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    #partners .partners-container .partner-card {
+        width: 150px;
+    }
+
+    #partners .partners-container .partner-card img {
+        max-width: 100%; /* Adjust for tablets */
+    }
+}
+
+/* Mobile (optional) */
+@media (max-width: 768px) {
+    #partners .partners-container .partner-card img {
+        max-width: 150px; /* Adjust for mobile devices */
     }
 }
