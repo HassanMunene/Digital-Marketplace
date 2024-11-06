@@ -63,10 +63,6 @@
     height: auto;
 }
 
-#partners .partners-container .partner-card .cybill_img {
-    padding-left: 45px !important;
-}
-
 #partners .partners-container .partner-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);

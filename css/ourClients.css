@@ -199,8 +199,26 @@
     gap: 11px;
 }
 
-.client-logo:hover {
-    transform: scale(1.1); /* Zoom effect on hover */
+.logos-container .client-card {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    padding: 10px;
+    width: 150px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: var(--light-gray);
+}
+
+.logos-container .client-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.logos-container .client-card img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Desktop screens */
