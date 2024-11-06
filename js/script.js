@@ -35,6 +35,20 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
 
+
+// JavaScript for scroll-based header background change
+window.addEventListener('scroll', () => {
+    const header = document.getElementById('header');
+    
+    // Check if the page has been scrolled down by 100px or more
+    if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+
 /*=============================================================================================
                     ABOUT US SECTION
 ==============================================================================================*/

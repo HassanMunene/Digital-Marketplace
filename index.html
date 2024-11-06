@@ -7,10 +7,11 @@
 
     <!--------CSS file link --------------------->
     <link rel="stylesheet" href="css/styles.css">
+    <!--------Header section CSS file link --------------------->
+    <link rel="stylesheet" href="css/headerSection.css">
 
     <!--------Hero section CSS file link --------------------->
     <link rel="stylesheet" href="css/heroSection.css">
-
 
     <!--------About us section styling--------------------->
     <link rel="stylesheet" href="css/aboutUs.css">
@@ -34,10 +35,13 @@
 </head>
 <body>
     <!---------------------------Header section starts--------------------------------------->
-    <header class="header">
+    <header class="header--TuwRF" id="header">
+        <!-- Logo -->
         <a href="#" class="logo">
             <img src="assets/benolives_logo.png" alt="benolives_logo">
         </a>
+    
+        <!-- Desktop Menu -->
         <div class="desktop-menu">
             <nav class="navbar">
                 <a href="#home">Home</a>
@@ -46,11 +50,15 @@
                 <a href="#contact" class="active">Contact Us</a>
             </nav>
         </div>
+    
+        <!-- Mobile Menu Icon (Hamburger) -->
         <div id="open-menu-btn" class="open-menu-btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="#000" class="bi bi-list" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
             </svg>
         </div>
+    
+        <!-- Mobile Menu -->
         <div class="mobile-menu">
             <div id="close-menu-btn" class="close-menu-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
@@ -64,59 +72,43 @@
                 <a href="#contact" class="active menu-link">Contact Us</a>
             </nav>
         </div>
-    </header>
+    </header>    
     <!---------------------------Header section ends----------------------------------------->
 
     <!---------------------------Home section starts------------------------------------------>
     <section class="home" id="home">
-        <div class="swiper home-slider">
-            <div class="swiper-wrapper">
-                <section class="swiper-slide slide" style="background: url(./assets/benolives_image.webp) no-repeat;">
-                    <div class="content">
-                        <h3>
-                            We are a company that believes in securing the cyberspace!
-                        </h3>
-                        <p>
-                            We enhance the effectiveness of ICT resources for your business growth by taking up world’s 
-                            leading ICT products and developed strategic partners relationships with principal equipment 
-                            vendors that enable us deliver optimal ICT products and affordable prices.
-                        </p>
-                        <a href="#contact" class="btn">Contact Us</a>
-                    </div>
-                </section>
-                <section class="swiper-slide slide slide3" style="background: url(./assets/hero_section3.jpg) no-repeat;">
-                    <div class="content">
-                        <h3>
-                            Comprehensive Software Licensing Solutions
-                        </h3>
-                        <p>
-                            We provide both pre-sales and front-line tech support to ensure you get the most out of 
-                            your software investments. Our offerings include volume and single-pack licenses for 
-                            end-user software and antivirus solutions, tailored to meet the needs of businesses and 
-                            individuals alike.
-                        </p>
-                        <a href="#contact" class="btn">Contact Us</a>
-                    </div>
-                </section>
-                <section class="swiper-slide slide slide2" style="background: url(./assets/benolives_website2.jpg) no-repeat;">
-                    <div class="content">
-                        <h3>
-                            We provide effective web solutions!
-                        </h3>
-                        <p>
-                            We enhance your online presence by leveraging the latest web technologies and best practices. 
-                            Our team specializes in creating responsive, user-friendly websites that drive business growth. 
-                            By partnering with industry-leading technology providers, we ensure that you receive optimal web solutions at competitive prices.
-                        </p>
-                        
-                        <a href="#contact" class="btn">Contact Us</a>
-                    </div>
-                </section>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+        <div class="background_images">
+            <picture>
+                <source srcset="assets/benolives_image.webp" media="(min-width: 1440px)">
+                <source srcset="assets/benolives_image.webp" media="(max-width: 640px)">
+                <img src="assets/benolives_image.webp" class="imageBanner---h3G2" alt="Free mixed hero backgrounds">
+            </picture>
         </div>
-    </section>
+        <div class="background_image_overlay"></div>
+        <div class="content_section">
+            <div class="content_wrapper">
+                <h1 class="h1--bZ6EI L--opXRs white--VZV9n">Securing Your Digital Future with Expert Cybersecurity Solutions</h1>
+                <h2>
+                    We enhance the effectiveness of ICT resources for your business growth by taking up world’s 
+                    leading ICT products and developed strategic partners relationships with principal equipment 
+                    vendors that enable us deliver optimal ICT products and affordable prices.
+                </h2>
+
+            </div>
+            <div class="readeMoreAboutUsContainer">
+                <a href="#about-us">
+                    <u>Read more about Us</u>
+                </a>
+            </div>
+            <div class="contactUsContainer">
+                <div class="contact-us">
+                    <a href="#contact">
+                        <u>Contact Us</u>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>    
     <!---------------------------Home section ends-------------------------------------------->
 
     <!---------------------------About section starts------------------------------------------>

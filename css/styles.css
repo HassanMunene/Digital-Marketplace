@@ -5,7 +5,7 @@
 =============================================================================================*/
 
 * {
-    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,12 +14,18 @@
     text-decoration: none;
     transition: all .2s linear;
 }
-
 body {
+    color: #191b26;
+    margin: 0;
+    padding: 0;
     background: var(--light-bg);
 }
 
 html {
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    tab-size: 4;
+    -webkit-text-size-adjust: 100%;
     font-size: 68.5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -123,82 +129,6 @@ html {
     html::-ms-scrollbar-thumb:hover {
         background: var(--dark-blue); /* Darker shade on hover */
     }
-}
-
-/*==========================================================================================
-                                    HEADER SECTION STARTS HERE
-===========================================================================================*/
-.header {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    box-shadow: var(--box-shadow);
-    padding: 1.5rem 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-    background: var(--white);
-}
-
-.header .logo img {
-    width: 200px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 100%; /* Responsive design */
-}
-
-
-/* Show the desktop menu */
-.desktop-menu {
-    display: flex;
-}
-
-.desktop-menu .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navbar a {
-    font-size: 1.5rem;
-    color: var(--black);
-    text-transform: uppercase;
-    margin-left: 1.5rem;
-    transition: all 0.3s, color 0.3s;
-}
-
-.navbar a.active,
-.navbar a:hover {
-    background: var(--blue);
-    padding: 7px 13px;
-    border-radius: 3px;
-    color: var(--white);
-}
-
-.open-menu-btn {
-    display: none;
-    cursor: pointer;
-}
-
-.header .mobile-menu {
-    position: fixed; /* Fixed position for mobile menu */
-    top: 0;
-    right: 0; /* Start from the right */
-    width: 300px; /* Set width for the slide-in menu */
-    height: 100vh; /* Full height */
-    background: var(--white);
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-    z-index: 1000;
-    transform: translateX(100%); /* Start off-screen */
-    opacity: 0; /* Start invisible */
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
-    visibility: hidden; /* Hidden by default */
-}
-
-/* Add a new class for hiding the menu */
-.header .mobile-menu.inactive {
-pointer-events: none; /* Prevent interaction when hidden */
 }
 
 

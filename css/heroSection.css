@@ -12,135 +12,152 @@
 /*=============================================================================================
                         HERO SECTION AND SLIDER STARTS HERE
 =============================================================================================*/
+
+/* Hero Section */
 .home {
-    padding: 0;
+    position: relative;
+    width: 100%;
+    min-height: 450px;
+    columns: var(--white);
+    z-index: 9;
 }
-.home .slide {
-    min-height: 45rem;
+
+/* Background image and sizing */
+.home .background_images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.background--co1Y8 picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.imageBanner---h3G2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay */
+.background_image_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(25, 27, 38, 0.20), rgba(25, 27, 38, 0.20));
+}
+
+/* Content */
+.home .content_section {
+    position: relative;
+    width: 100%;
     display: flex;
+    color: var(--white);
     align-items: center;
-    position: relative;
-    background-size: cover !important;
-    background-position: center !important;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    min-height: 440px;
+    padding: 0 32px;
 }
 
-.home .slide::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
+
+.home .content_section .content_wrapper {
     width: 100%;
-    background: rgba(0,0,0,.2);
+    max-width: 840px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-/* decrease the opacity if the two slides to make the text more visible */
-.home .slide2::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(0,0,0,.5);
+.home .content_section .content_wrapper h1 {
+    margin: 0 0 8px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--white);
+    text-transform: capitalize;
 }
 
-.home .slide3::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(0,0,0,.6);
-}
-
-.home .slide .content {
-    width: 50rem;
-    position: relative;
-}
-
-.home .slide .content h3 {
-    font-size: 3rem;
+.home .content_section .content_wrapper h2 {
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0 0 24px;
     color: #fff;
-    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.home .slide .content p {
+.readeMoreAboutUsContainer {
+    position: absolute;
+    left: 32px;
+    bottom: 24px;
+}
+
+.readeMoreAboutUsContainer a {
     font-size: 1.5rem;
-    color: #D3D3D3;
-    line-height: 1.5;
-    padding: 1rem 0;
+    color: #fff;
 }
 
-.home .swiper-button-next {
-    top: initial;
-    bottom: 0;
-    left: initial;
-    right: 0;
-    height: 6rem;
-    width: 6rem;
-    line-height: 6rem;
-    background: var(--white);
-    color: var(--black);
+.home .contactUsContainer {
+    position: absolute;
+    right: 32px;
+    bottom: 24px;
 }
-.home .swiper-button-prev {
-    top: initial;
-    bottom: 0;
-    left: initial;
-    right: 6rem;
-    height: 6rem;
-    width: 6rem;
-    line-height: 6rem;
-    background: var(--white);
+
+.home .contactUsContainer .contact-us {
+    background-color: var(--white);
+    padding: 1.2rem 3rem;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.home .contactUsContainer .contact-us a {
     color: var(--black);
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
-    font-size: 3rem;
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-    background: var(--blue);
+.home .contactUsContainer .contact-us:hover {
+    background-color: var(--blue);
+    color: var(--white);
+    scale: 1.1;
     color: var(--white) !important;
 }
 
-/* Mobile screen styling */
+.home .contactUsContainer .contact-us a:hover {
+    color: var(--white);
+}
+
+/* Media Queries for responsiveness */
 @media (max-width: 768px) {
-       /* This is the start of the hero section on mobile screens */
-       .home .slide {
-        justify-content: center;
+    .h1--bZ6EI {
+        font-size: 2.2rem;
     }
 
-    .home .slide .content {
-        text-align: center;
+    h2 {
+        font-size: 1.2rem;
     }
 
-    .home .slide .content h3 {
-        font-size: 3rem;
+    .heroSearch--0FfMR input {
+        width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .h1--bZ6EI {
+        font-size: 1.8rem;
     }
 
-    /* decrease the opacity of the two slides on mobile screens even more to make the
-    texts more visible */
-    .home .slide2::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background: rgba(0,0,0,.6);
+    h2 {
+        font-size: 1rem;
     }
-    
-    .home .slide3::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background: rgba(0,0,0,.6);
+
+    .heroSearch--0FfMR input {
+        width: 200px;
     }
 }

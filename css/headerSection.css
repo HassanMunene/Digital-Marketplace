@@ -1,0 +1,122 @@
+:root {
+    --blue: #2d2d72;
+    --yellow: #f5bf23;
+    --black: #111;
+    --white: #fff;
+    --light-color: #585757;
+    --light-bg: #eee;
+    --box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+    --border: .1rem solid rgba(0,0,0,.3);
+}
+
+
+/* Header Styles */
+.header--TuwRF {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background-color: transparent; /* Initial transparent background */
+    position: fixed; /* Keep header fixed at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    transition: background-color 0.3s ease; /* Smooth transition for background change */
+}
+
+.header--TuwRF.scrolled {
+    background-color: #ffffff; /* Background changes to white on scroll */
+}
+
+.header--TuwRF .logo img {
+    width: 120px; /* Adjust logo size */
+    height: auto;
+}
+
+.desktop-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: #191b26;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar a.active {
+    color: #f5bf23; /* Highlight color */
+}
+
+.navbar a:hover {
+    color: #f5bf23; /* Hover effect */
+}
+
+/* Mobile Menu Toggle */
+#open-menu-btn {
+    display: none; /* Hidden by default on larger screens */
+    cursor: pointer;
+    z-index: 20;
+}
+
+#open-menu-btn svg {
+    width: 30px;
+    height: 30px;
+    fill: #191b26;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 10;
+    padding: 2rem;
+}
+
+.mobile-menu .navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mobile-menu .navbar a {
+    font-size: 1.2rem;
+    color: #191b26;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.mobile-menu .navbar a.active {
+    color: #f5bf23;
+}
+
+/* Close Mobile Menu Button */
+#close-menu-btn svg {
+    width: 30px;
+    height: 30px;
+    fill: #191b26;
+    cursor: pointer;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none; /* Hide desktop menu on mobile */
+    }
+
+    #open-menu-btn {
+        display: block; /* Show the hamburger icon on mobile */
+    }
+
+    .mobile-menu {
+        display: block; /* Show mobile menu on small screens */
+    }
+}
