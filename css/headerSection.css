@@ -10,50 +10,65 @@
 }
 
 
-/* Header Styles */
-.header--TuwRF {
+.header_section {
+    width: 100%;
+    height: 64px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 2rem;
-    background-color: transparent; /* Initial transparent background */
-    position: fixed; /* Keep header fixed at the top */
+    justify-content: center;
+    position: fixed;
     top: 0;
     left: 0;
-    right: 0;
     z-index: 10;
-    transition: background-color 0.3s ease; /* Smooth transition for background change */
+    transition: background-color .2s;
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
 }
 
-.header--TuwRF.scrolled {
-    background-color: #ffffff; /* Background changes to white on scroll */
+/* Background changes to white on scroll */
+.header_section.scrolled {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--white);
 }
 
-.header--TuwRF .logo img {
-    width: 120px; /* Adjust logo size */
+.header_section .header_container {
+    max-width: 1800px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 5%;
+    justify-content: space-between;
+}
+
+.header_section .header_container .logo {
+    flex: 0 0 auto;
+    background-color: var(--white);
+    padding: .5rem 0;
+    border-radius: 3px;
+}
+
+.header_section .header_container .logo img {
+    width: 200px;
     height: auto;
+    max-width: 100%;
 }
 
-.desktop-menu {
+.header_section .header_container .desktop-menu {
     display: flex;
     gap: 20px;
 }
 
-.navbar a {
-    color: #191b26;
+.header_section .header_container .desktop-menu .navbar a {
+    color: var(--white);
     text-decoration: none;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 500;
     padding: 10px;
     transition: color 0.3s ease;
 }
 
-.navbar a.active {
-    color: #f5bf23; /* Highlight color */
-}
-
-.navbar a:hover {
-    color: #f5bf23; /* Hover effect */
+.header_section .header_container .desktop-menu .navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
 }
 
 /* Mobile Menu Toggle */
