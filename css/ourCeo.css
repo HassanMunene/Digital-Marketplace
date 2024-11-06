@@ -53,7 +53,7 @@
 
 .ceo-role {
     font-size: 18px;
-    color: #555;
+    color: var(--blue);
     margin-top: 5px;
 }
 
@@ -77,11 +77,12 @@
 .ceo-social p {
     font-size: 16px;
     margin-top: 20px;
-    color: #333;
+    font-weight: 600;
+    color: var(--blue);
 }
 
 .ceo-social a {
-    color: #007bff;
+    color: var(--blue);
     text-decoration: none;
 }
 

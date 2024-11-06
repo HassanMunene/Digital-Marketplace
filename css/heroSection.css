@@ -1,0 +1,146 @@
+:root {
+    --blue: #2d2d72;
+    --yellow: #f5bf23;
+    --black: #111;
+    --white: #fff;
+    --light-color: #585757;
+    --light-bg: #eee;
+    --box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+    --border: .1rem solid rgba(0,0,0,.3);
+}
+
+/*=============================================================================================
+                        HERO SECTION AND SLIDER STARTS HERE
+=============================================================================================*/
+.home {
+    padding: 0;
+}
+.home .slide {
+    min-height: 45rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.home .slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.2);
+}
+
+/* decrease the opacity if the two slides to make the text more visible */
+.home .slide2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.5);
+}
+
+.home .slide3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.6);
+}
+
+.home .slide .content {
+    width: 50rem;
+    position: relative;
+}
+
+.home .slide .content h3 {
+    font-size: 3rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.home .slide .content p {
+    font-size: 1.5rem;
+    color: #D3D3D3;
+    line-height: 1.5;
+    padding: 1rem 0;
+}
+
+.home .swiper-button-next {
+    top: initial;
+    bottom: 0;
+    left: initial;
+    right: 0;
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    background: var(--white);
+    color: var(--black);
+}
+.home .swiper-button-prev {
+    top: initial;
+    bottom: 0;
+    left: initial;
+    right: 6rem;
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    background: var(--white);
+    color: var(--black);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 3rem;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: var(--blue);
+    color: var(--white) !important;
+}
+
+/* Mobile screen styling */
+@media (max-width: 768px) {
+       /* This is the start of the hero section on mobile screens */
+       .home .slide {
+        justify-content: center;
+    }
+
+    .home .slide .content {
+        text-align: center;
+    }
+
+    .home .slide .content h3 {
+        font-size: 3rem;
+    }
+
+    /* decrease the opacity of the two slides on mobile screens even more to make the
+    texts more visible */
+    .home .slide2::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0,0,0,.6);
+    }
+    
+    .home .slide3::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0,0,0,.6);
+    }
+}

@@ -7,14 +7,25 @@
 
     <!--------CSS file link --------------------->
     <link rel="stylesheet" href="css/styles.css">
+
+    <!--------Hero section CSS file link --------------------->
+    <link rel="stylesheet" href="css/heroSection.css">
+
+
+    <!--------About us section styling--------------------->
+    <link rel="stylesheet" href="css/aboutUs.css">
+
+    <!--------Our services section styling--------------------->
+    <link rel="stylesheet" href="css/ourServices.css">
+
     <!--------Our partner section styling--------------------->
     <link rel="stylesheet" href="css/ourPartners.css">
     <!--------Our clients section styling--------------------->
     <link rel="stylesheet" href="css/ourClients.css">
     <!--------Our partner section styling--------------------->
     <link rel="stylesheet" href="css/ourCeo.css">
-    <!--------Link to my downloaded font awesome css file------>
-    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--------Our Contact us section styling--------------------->
+    <link rel="stylesheet" href="css/contactUs.css">
 
     <!--------A link to swipper js css file from CDN----------->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -73,6 +84,20 @@
                         <a href="#contact" class="btn">Contact Us</a>
                     </div>
                 </section>
+                <section class="swiper-slide slide slide3" style="background: url(./assets/hero_section3.jpg) no-repeat;">
+                    <div class="content">
+                        <h3>
+                            Comprehensive Software Licensing Solutions
+                        </h3>
+                        <p>
+                            We provide both pre-sales and front-line tech support to ensure you get the most out of 
+                            your software investments. Our offerings include volume and single-pack licenses for 
+                            end-user software and antivirus solutions, tailored to meet the needs of businesses and 
+                            individuals alike.
+                        </p>
+                        <a href="#contact" class="btn">Contact Us</a>
+                    </div>
+                </section>
                 <section class="swiper-slide slide slide2" style="background: url(./assets/benolives_website2.jpg) no-repeat;">
                     <div class="content">
                         <h3>
@@ -84,20 +109,6 @@
                             By partnering with industry-leading technology providers, we ensure that you receive optimal web solutions at competitive prices.
                         </p>
                         
-                        <a href="#contact" class="btn">Contact Us</a>
-                    </div>
-                </section>
-                <section class="swiper-slide slide slide3" style="background: url(./assets/benolives_website2.jpg) no-repeat;">
-                    <div class="content">
-                        <h3>
-                            Comprehensive Software Licensing Solutions
-                        </h3>
-                        <p>
-                            We provide both pre-sales and front-line tech support to ensure you get the most out of 
-                            your software investments. Our offerings include volume and single-pack licenses for 
-                            end-user software and antivirus solutions, tailored to meet the needs of businesses and 
-                            individuals alike.
-                        </p>
                         <a href="#contact" class="btn">Contact Us</a>
                     </div>
                 </section>
@@ -116,7 +127,7 @@
         <div class="content animate">
             <div class="about-section">
                 <div class="about-image" id="about_image">
-                    <img src="./assets/about_us_section_img.jpg" alt="Our Company">
+                    <img src="./assets/about_us.webp" alt="Our Company">
                 </div>
                 <div class="about-text" id="about_text">
                     <p class="text_section">
@@ -482,7 +493,7 @@
     </section>    
     <!---------------------------Review section ends-------------------------------------------->
 
-    <!---------------------------Our team section starts-------------------------------------------->
+    <!---------------------------Our Ceo section starts-------------------------------------------->
     <section id="ceo-message" class="ceo-message-section">     
         <div class="ceo-container">
             <!-- CEO Image and Message Wrapper -->
@@ -504,7 +515,7 @@
                     </p>
                     <!-- CEO's Signature -->
                     <div class="ceo-signature">
-                        <img src="./assets/signature_kelvin.png" alt="Kelvin Gitau's Signature" class="signature-image">
+                        <img src="./assets/e-sign_no_bg.png" alt="Kelvin Gitau's Signature" class="signature-image">
                     </div>
                     <!-- CEO's LinkedIn & Info -->
                     <div class="ceo-social">
@@ -519,7 +530,7 @@
     
         </div>
     </section>
-    <!---------------------------Our team section ends-------------------------------------------->
+    <!---------------------------Our Ceo section ends-------------------------------------------->
 
     <!------------------------Contact us section starts-------------------------------------------->
     <section class="contact" id="contact">
@@ -536,7 +547,31 @@
         <div class="contact-details">
             <div class="location-info">
                 <h2>Our Location</h2>
-                <p>Two Rivers Mall, Along Limuru Road, Southern Towers, 3rd Floor</p>
+                <p>
+                    <span class="goole_location_icon">
+                        <?xml version="1.0" encoding="UTF-8"?>
+                        <svg version="1.1" viewBox="0 0 1024 1024" width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+                        <path transform="translate(710,144)" d="m0 0h20l21 3 19 5 13 5 16 8 14 9 14 11 14 14 12 16 9 16 7 15 5 15 4 20 2 19-1 20-4 23-9 27-13 27-12 20-24 36-1 318-2 11-7 13-9 10-10 6-10 4-12 1h-515l-9-2-14-7-11-11-6-11-3-9v-524l3-12 6-12 11-11 14-7 10-2 339-1 5-4 7-8 13-13 13-10 15-9 14-7 21-7 21-4z" fill="#FCFCFC"/>
+                        <path transform="translate(252,208)" d="m0 0h339l-3 7-8 13-8 16-6 17-4 18-1 9v28l2 15 4 18 5 15 11 24v6l-12 11-360 360-3 1v-514l3-12 6-12 11-11 14-7z" fill="#1EA168"/>
+                        <path transform="translate(710,144)" d="m0 0h20l21 3 19 5 13 5 16 8 14 9 14 11 14 14 12 16 9 16 7 15 5 15 4 20 2 19-1 20-4 23-9 27-13 27-12 20-24 36-1 4-4 4-28 44-12 21-15 30-8 21-8 24-7 30-4 25-3 9-3 3h-7l-6-5-1-2-5-34-7-29-9-27-11-26-14-27-9-15-14-22-17-25-9-13-17-26-11-18-2-5-2-1-3-9-9-20-6-18-4-20-1-10v-28l3-19 6-20 6-14 11-19 3-5 2-4 5-4 7-8 13-13 13-10 15-9 14-7 21-7 21-4z" fill="#D84D40"/>
+                        <path transform="translate(512,569)" d="m0 0h3l6 8 225 225 8 7 6 5v1l-23 1h-423l-49-1v-2l6-4 239-239z" fill="#4888F4"/>
+                        <path transform="translate(583,393)" d="m0 0 3 1 5 10 13 21 16 24 5 8-8 7-5 6-49 49-8 7-8 8-7 8-21 21-6 5-244 244-4 1v2h49v1h-63l-9-2-14-7-11-11-6-11-3-9v-10l10-9 361-361z" fill="#FEDD51"/>
+                        <path transform="translate(814,457)" d="m0 0h2v307l-2 3-5-5-9-10-46-46-8-7-10-10-8-7-9-9 3-3-4-2 7-2 3-6 3-16 4-23 8-30 10-28 8-18 10-19 10-18 14-22 16-25z" fill="#CCCECE"/>
+                        <path transform="translate(333,256)" d="m0 0h21l15 3 17 7 13 9 2 2-1 5-18 18-3 4-4-1-6-5-11-5-5-1h-18l-13 4-9 6-8 7-7 11-4 11-1 5v15l4 14 6 10 9 10 9 6 11 4 5 1h16l11-3 11-6 5-4 7-11 4-8-2-2h-45l-1-1 1-33h82l2 1v29l-4 18-5 12-7 12-11 12-9 7-14 7-18 5-8 1h-16l-16-3-13-5-10-5-12-9-9-9-9-13-6-13-4-13-1-6v-23l3-14 5-13 6-11 8-10 9-9 15-10 14-6z" fill="#FBFBFB"/>
+                        <path transform="translate(623,457)" d="m0 0h3l23 35 8 13 10 17 13 25 11 27 8 24 7 29 5 34 4 6-4-2-9-10-11-11-7-8-53-53v-2l-4-2-38-38-6-5-5-6-5-5-6-7 1-5 39-39 3-4h2l2-4z" fill="#CCCECD"/>
+                        <path transform="translate(710,248)" d="m0 0h18l12 3 13 7 6 5 8 10 6 12 3 10v18l-4 13-7 11-7 8-13 9-9 4-12 2h-8l-14-3-14-7-10-9-7-9-6-13-2-11 1-14 4-13 6-10 8-9 10-7 8-4z" fill="#7D2F2B"/>
+                        <path transform="translate(510,570)" d="m0 0 4 1 1 4-5 4h-2l-2 5-6 8-32 32h-2l-2 4h-2l-2 4h-2l-2 4h-2l-2 4h-2l-2 4-6 5-6 7-4 4h-2l-2 4h-2l-2 4h-2l-2 4-100 100h-2l-2 4h-2l-1 3-8 7-13 13h-3l-2 4h-2l-1 11 3 1h-22v-2l6-4z" fill="#337CFC"/>
+                        <path transform="translate(746,807)" d="m0 0 7 3 6 3 1 2h-398v-1l49-1h293l35-1v-2z" fill="#337CFC"/>
+                        <path transform="translate(500,580)" d="m0 0v3l-229 229-1 3h-5v-2l6-4z" fill="#3D82F8"/>
+                        <path transform="translate(796,803)" d="m0 0h2v2l-10 6-10 4h-12l2-2 15-3z" fill="#D1D3D3"/>
+                        <path transform="translate(716,776)" d="m0 0 3 1 1 2 5 2 3 5-2 4-5-5-4-5z" fill="#357DFB"/>
+                        <path transform="translate(796,803)" d="m0 0h2v2l-10 6-3 1 2-4z" fill="#D9DADA"/>
+                        <path transform="translate(276,804)" d="m0 0v3l-5 5-1 3h-5v-2l6-4z" fill="#4589EA"/>
+                        <path transform="translate(512,569)" d="m0 0h3l5 7-1 3-3-1-3-7z" fill="#4083F7"/>
+                        </svg>
+                    </span>
+                    <span>Two Rivers Mall, Along Limuru Road, Southern Towers, 3rd Floor</span>
+                </p>
                 <p>
                     <strong>Opening Hours:</strong> Mon - Fri: 8 AM - 5 PM
                 </p>
