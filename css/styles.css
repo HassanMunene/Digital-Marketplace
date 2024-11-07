@@ -208,6 +208,35 @@ html {
 }
 
 /*============================================================================================
+                                TOAST NOTIFICATION STYLING
+=============================================================================================*/
+/* Basic Styling for Toast */
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: rgb(60, 161, 60);
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 20;
+    left: 50%;
+    top: 50px;
+    transform: translateX(-50%);
+    font-size: 17px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Toast visible on success */
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*============================================================================================
                                 MEDIA QUERIES SECTION
 =============================================================================================*/
 @media (max-width: 1200px) {

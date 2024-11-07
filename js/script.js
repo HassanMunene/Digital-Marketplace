@@ -250,3 +250,70 @@ document.addEventListener('DOMContentLoaded', function() {
         prevReview();
     })
 })
+
+
+/*=============================================================================================
+    JavaScript to handle the form submission and send the data to EmailJS.
+    We are Emailjs because our website is basically pure html css and js and that as you
+    know does not support backend logic to send email. At the moment we are using the free
+    version of Emailjs which is 200 mails per month. Of course When the sites get more traffic
+    we will slowly upgrade. The email and password to login to Emailjs dashboard is
+    info@benolives.co.ke, BENOLIVES123#b
+==============================================================================================*/
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize EmailJS (replace with your actual user ID) or rather public key
+    emailjs.init("bIKSpm0o001Zl6o1t");
+    
+    // Handle form submission
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        // Prevent the form from submitting the traditional way
+        event.preventDefault();
+
+        // Collect form data
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Prepare the data for EmailJS
+        const formData = {
+            from_name: name,
+            from_email: email,
+            message: message,
+            to_name: 'Ben Olives Support',
+        };
+
+        // Send the email
+        emailjs.send('Ben Olives Enterprise', 'template_q6ui0ng', formData)
+        .then(function(response) {
+            console.log('Success!', response.status, response.text);
+
+            // Show the toast notification
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+            toastMessage.textContent = 'Thank you for contacting us! We have received your email and will get back to you soon.';
+            // Show the toast
+            toast.classList.add('show');
+            
+            // Hide the toast after 3 seconds
+            setTimeout(function() {
+                toast.classList.remove('show');
+            }, 3000);
+            
+            // reset the form
+            document.getElementById("contact-form").reset();
+        }, function(error) {
+            console.log('Failed...', error);
+            
+            // Show the toast with error message
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+            toastMessage.textContent = 'Sorry, something went wrong. Please try again.';
+            
+            toast.classList.add('show');
+            
+            setTimeout(function() {
+                toast.classList.remove('show');  // Hide the toast after 3 seconds
+            }, 5000);
+        });
+    });    
+})
