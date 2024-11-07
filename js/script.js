@@ -35,18 +35,31 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
 
+/*=============================================================================================
+                    SCROLL EVENTS FOR THE WEBSITE
+==============================================================================================*/
+document.addEventListener('DOMContentLoaded', function() {
+    // When we scroll, the header background change to white from transparent
+    window.addEventListener('scroll', () => {
+        const header = document.getElementById('header');
+        // Check if the page has been scrolled down by 100px or more
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
 
-// JavaScript for scroll-based header background change
-window.addEventListener('scroll', () => {
-    const header = document.getElementById('header');
-    
-    // Check if the page has been scrolled down by 100px or more
-    if (window.scrollY > 100) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
+    // When we refresh the browser scroll back to top
+    window.onload = function() {
+        if (window.location.hash) {
+            // Clear the fragment identifier and scroll to the top
+            history.replaceState(null, null, ' ');
+            window.scrollTo(0, 0);
+        }
+    };
+})
+
 
 
 /*=============================================================================================
