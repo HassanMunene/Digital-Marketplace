@@ -101,6 +101,10 @@
     fill: var(--white);
 }
 
+#open-menu-btn svg.scrolled {
+    fill: var(--black);
+}
+
 /* Mobile Menu - Initial Position (off-screen) */
 .mobile-menu {
     display: block; /* Hidden by default */
@@ -128,8 +132,8 @@
 
 .mobile-menu .close-menu-btn svg {
     cursor: pointer;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     color: var(--white);
 }
 
@@ -146,20 +150,22 @@
 
     /* Styles for the navbar inside mobile menu */
     .mobile-menu .navbar {
-        margin-top: 8rem;
+        margin-top: 5rem;
         display: flex;
         flex-direction: column; /* Stack links vertically */
         align-items: flex-start; /* Align items to the left */
         height: 100%; /* Full height */
-        padding: 2rem; /* Padding for aesthetics */
+        padding-top: 8rem;
         color: var(--black); /* Text color */
+        border-top: 1px solid var(--light-color);
     }
     .mobile-menu .navbar a {
         font-size: 1.5rem; /* Adjust font size */
-        color: var(--black); /* Dark text color */
+        color: var(--white); /* Dark text color */
         text-transform: uppercase; /* Uppercase text */
         margin: 2rem 0; /* Space between items */
         text-decoration: none; /* Remove underline */
         transition: color 0.3s; /* Smooth color transition */
+        border-bottom: 1px solid var(--light-color);
     }
 }

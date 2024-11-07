@@ -3,6 +3,7 @@
 ==============================================================================================*/
 document.addEventListener('DOMContentLoaded', function() {
     // Open and close the mobile menu when the buttons are clicked
+    const mobile_menu_links = document.querySelectorAll('.mobile-menu-link');
     document.getElementById('open-menu-btn').addEventListener('click', function() {
         document.querySelector('.mobile-menu').classList.add('active');
     });
@@ -10,6 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('close-menu-btn').addEventListener('click', function() {
         document.querySelector('.mobile-menu').classList.remove('active');
     });
+    mobile_menu_links.forEach(link => {
+        link.addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.remove('active');
+        })
+    })
 })
 
 
@@ -19,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     // When we scroll, the header background change to white from transparent
     const desktopLinks = document.querySelectorAll('.desktop-link');
+    const openMenuBtnSvg = document.querySelector('.open-menu-btn svg');
     window.addEventListener('scroll', () => {
         const header = document.getElementById('header');
         // Check if the page has been scrolled down by 100px or more
@@ -27,11 +34,13 @@ document.addEventListener('DOMContentLoaded', function() {
             desktopLinks.forEach(link => {
                 link.classList.add('scrolled');
             })
+            openMenuBtnSvg.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
             desktopLinks.forEach(link => {
                 link.classList.remove('scrolled');
             })
+            openMenuBtnSvg.classList.remove('scrolled');
         }
     });
 
