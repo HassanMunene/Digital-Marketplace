@@ -2,35 +2,13 @@
                     NAVIGATION BAR SECTION
 ==============================================================================================*/
 document.addEventListener('DOMContentLoaded', function() {
-    const open_menu_button = document.getElementById('open-menu-btn');
-    open_menu_button.addEventListener('click', function() {
-        const mobileMenu = document.querySelector('.mobile-menu');
-        mobileMenu.classList.add('active');
-        mobileMenu.classList.remove('inactive'); // Make it interactive
-    })
+    // Open and close the mobile menu when the buttons are clicked
+    document.getElementById('open-menu-btn').addEventListener('click', function() {
+        document.querySelector('.mobile-menu').classList.add('active');
+    });
 
-    const close_menu_button = document.getElementById('close-menu-btn');
-    close_menu_button.addEventListener('click', function() {
-        const mobileMenu = document.querySelector('.mobile-menu');
-        mobileMenu.classList.remove('active');
-        mobileMenu.classList.add('inactive'); // Prevent interaction while hidden
-    })
-
-    const menu_links = document.querySelectorAll('.menu-link');
-    menu_links.forEach(menu_link => {
-        menu_link.addEventListener('click', function() {
-            const mobileMenu = document.querySelector('.mobile-menu');
-            mobileMenu.classList.remove('active');
-            mobileMenu.classList.add('inactive'); // Prevent interaction while hidden    
-        })
-    })
-    var swiper = new Swiper(".home-slider", {
-        loop: true,
-        grabCursor: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
+    document.getElementById('close-menu-btn').addEventListener('click', function() {
+        document.querySelector('.mobile-menu').classList.remove('active');
     });
 })
 

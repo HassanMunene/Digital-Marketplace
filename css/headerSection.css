@@ -87,57 +87,43 @@
 #open-menu-btn svg {
     width: 30px;
     height: 30px;
-    fill: #191b26;
+    fill: var(--white);
 }
 
-/* Mobile Menu */
+/* Mobile Menu - Initial Position (off-screen) */
 .mobile-menu {
-    display: none; /* Hidden by default */
-    position: absolute;
-    top: 0;
-    right: 0;
+    display: block; /* Hidden by default */
+    position: fixed;  /* Make it fixed on the screen */
+    bottom: -100%;    /* Start off-screen at the bottom */
+    left: 0;
     width: 100%;
-    background-color: #fff;
+    height: 100vh;
+    background-color: #191b26;
     z-index: 10;
     padding: 2rem;
+    transition: all 0.5s ease-in-out; /* Smooth transition */
 }
 
-.mobile-menu .navbar {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+/* Mobile Menu - Active (visible) state */
+.mobile-menu.active {
+    bottom: 0; /* Slide in to the top */
 }
 
-.mobile-menu .navbar a {
-    font-size: 1.2rem;
-    color: #191b26;
-    text-decoration: none;
-    padding: 10px;
-}
-
-.mobile-menu .navbar a.active {
-    color: #f5bf23;
-}
-
-/* Close Mobile Menu Button */
-#close-menu-btn svg {
-    width: 30px;
-    height: 30px;
-    fill: #191b26;
+.mobile-menu .close-menu-btn svg {
     cursor: pointer;
+    width: 20px;
+    height: 20px;
+    color: var(--white);
 }
 
 /* Media Query for Mobile */
 @media (max-width: 768px) {
-    .desktop-menu {
-        display: none; /* Hide desktop menu on mobile */
+    /* Hide desktop menu on mobile */
+    .header_section .header_container .desktop-menu {
+        display: none;
     }
 
     #open-menu-btn {
         display: block; /* Show the hamburger icon on mobile */
-    }
-
-    .mobile-menu {
-        display: block; /* Show mobile menu on small screens */
     }
 }
