@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', () => {
         const header = document.getElementById('header');
         // Check if the page has been scrolled down by 100px or more
-        if (window.scrollY > 100) {
+        if (window.scrollY > 50) {
             header.classList.add('scrolled');
             desktopLinks.forEach(link => {
                 link.classList.add('scrolled');

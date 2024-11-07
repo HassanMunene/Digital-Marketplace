@@ -109,7 +109,8 @@
 .mobile-menu {
     display: block; /* Hidden by default */
     position: fixed;  /* Make it fixed on the screen */
-    bottom: -100%;    /* Start off-screen at the bottom */
+    bottom: -110%;    /* Start off-screen at the bottom */
+    top: 110%;
     left: 0;
     width: 100%;
     height: 100vh;
@@ -122,6 +123,7 @@
 /* Mobile Menu - Active (visible) state */
 .mobile-menu.active {
     bottom: 0; /* Slide in to the top */
+    top: 0;
 }
 
 .mobile-menu .close-menu-btn {
