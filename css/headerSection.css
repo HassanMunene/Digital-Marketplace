@@ -44,6 +44,7 @@
     background-color: var(--white);
     padding: .5rem 0;
     border-radius: 3px;
+    z-index: 12; /* Higher z-index that mobile menu to it will always be visible */
 }
 
 .header_section .header_container .logo img {
@@ -66,6 +67,10 @@
     transition: color 0.3s ease;
 }
 
+.header_section .header_container .desktop-menu .navbar a.scrolled {
+    color: var(--black);
+}
+
 .header_section .header_container .desktop-menu .navbar a:hover {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 3px;
@@ -77,11 +82,17 @@
     border-radius: 3px;
 }
 
+.header_section .header_container .desktop-menu .navbar .contact_us.scrolled {
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    color: var(--white);
+    border-radius: 4px;
+}
+
 /* Mobile Menu Toggle */
 #open-menu-btn {
     display: none; /* Hidden by default on larger screens */
     cursor: pointer;
-    z-index: 20;
 }
 
 #open-menu-btn svg {
@@ -109,10 +120,16 @@
     bottom: 0; /* Slide in to the top */
 }
 
+.mobile-menu .close-menu-btn {
+    position: absolute;
+    top: 20px;
+    right: 23px;
+}
+
 .mobile-menu .close-menu-btn svg {
     cursor: pointer;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     color: var(--white);
 }
 
@@ -125,5 +142,24 @@
 
     #open-menu-btn {
         display: block; /* Show the hamburger icon on mobile */
+    }
+
+    /* Styles for the navbar inside mobile menu */
+    .mobile-menu .navbar {
+        margin-top: 8rem;
+        display: flex;
+        flex-direction: column; /* Stack links vertically */
+        align-items: flex-start; /* Align items to the left */
+        height: 100%; /* Full height */
+        padding: 2rem; /* Padding for aesthetics */
+        color: var(--black); /* Text color */
+    }
+    .mobile-menu .navbar a {
+        font-size: 1.5rem; /* Adjust font size */
+        color: var(--black); /* Dark text color */
+        text-transform: uppercase; /* Uppercase text */
+        margin: 2rem 0; /* Space between items */
+        text-decoration: none; /* Remove underline */
+        transition: color 0.3s; /* Smooth color transition */
     }
 }

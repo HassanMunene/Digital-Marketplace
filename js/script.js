@@ -18,13 +18,20 @@ document.addEventListener('DOMContentLoaded', function() {
 ==============================================================================================*/
 document.addEventListener('DOMContentLoaded', function() {
     // When we scroll, the header background change to white from transparent
+    const desktopLinks = document.querySelectorAll('.desktop-link');
     window.addEventListener('scroll', () => {
         const header = document.getElementById('header');
         // Check if the page has been scrolled down by 100px or more
         if (window.scrollY > 100) {
             header.classList.add('scrolled');
+            desktopLinks.forEach(link => {
+                link.classList.add('scrolled');
+            })
         } else {
             header.classList.remove('scrolled');
+            desktopLinks.forEach(link => {
+                link.classList.remove('scrolled');
+            })
         }
     });
 
